@@ -15,17 +15,9 @@ match | 123,340.00 	|
 skip 	| 720p				|
 
 
-### A Code Block
-
-    header h1 a { 
-      display: block; 
-      width: 300px; 
-      height: 80px; 
-    }
+#### My Solution
+  
 		^-?\d+((\.|,|e)?(\d+)?){1,}$
 
 
-
-
-
-The Solution
+#### The Solution
