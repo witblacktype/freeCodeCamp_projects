@@ -5,16 +5,24 @@ Regular Expressions Collection
 > Match any scientific, financial, or exponential number
 
 #### Requirements
-task	| text	| result
-----	| ----	| ------
-match | text	| 3.14529		
-match | text	| -255.34		
-match | text	| 128		
-match | text	| 1.9e10
-match | text	| 123,340.00
-skip 	| text	| 720p
+task	| text	      |
+----	| ----------- |
+match | 3.14529			|
+match | -255.34			|
+match | 128					|
+match | 1.9e10 			|
+match | 123,340.00 	|
+skip 	| 720p				|
 
-^-?\d+((\.|,|e)?(\d+)?){1,}$
+
+### A Code Block
+
+    header h1 a { 
+      display: block; 
+      width: 300px; 
+      height: 80px; 
+    }
+		^-?\d+((\.|,|e)?(\d+)?){1,}$
 
 
 
