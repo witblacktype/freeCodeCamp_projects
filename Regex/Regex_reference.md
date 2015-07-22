@@ -1,8 +1,13 @@
-Regular Expressions Collection
-==============================
+A Practical Collection of Regular Expressions 
+=============================================
 
-## Use Case 1
-> Match any scientific, financial, or exponential number with a Regex
+Practical Examples of Regular Expressions from regexone.com
+
+## Example 1
+<dl>
+  <dt>Use Case</dt>
+  <dd>Match any scientific, financial, or exponential number with a Regex</dd>
+</dl>
 
 #### Requirements
 task	| text	      |
@@ -26,5 +31,8 @@ skip 	| 720p				|
 
 > Applies knowledge of number expressions across computer science to tightly define the number format being matched.
 
-## Use Case 2
-> Match a phone number
+## Example 2
+<dl>
+  <dt>Use Case</dt>
+  <dd>Match a phone number</dd>
+</dl>
