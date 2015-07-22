@@ -3,7 +3,9 @@ A Practical Collection of Regular Expressions
 
 Practical Examples of Regular Expressions from regexone.com
 
-## Example 1
+Example1 Link [Example 1](#example_1)
+
+## <a id="example_1"></a>Example 1
 
 #### Use Case
 
@@ -126,7 +128,7 @@ match | ```<div>Hello <span>world</span></div>```
 
 	<\w+ ?\w*=?('|")?(http://|\w+)*?\.?(\w+)?('|")?>(\w|\s)*</\w+>
 
-> My solution cannot handle the full match to ```<div>Hello <span>world</span></div>```. It only matches	```<span>world</span>```. I would need to expand the repitition of the tagging my RegEx can handle. 
+> My solution cannot handle the full match to '```<div>Hello <span>world</span></div>```'. It only matches	'```<span>world</span>```'. I would need to expand the repitition of the tagging my RegEx can handle. Also, my use of '```http://```' could have been handled easier with '```w\://```' 
 >
 > As pointed out on regexone.com, both email and html parsing is tricky with many outlying use cases. It is best to use a well built and maintained library to parse email and html.
 
