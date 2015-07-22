@@ -3,7 +3,13 @@ A Practical Collection of Regular Expressions
 
 Practical Examples of Regular Expressions from regexone.com
 
-Example1 Link [Example 1](#example_1)
+#### Examples
+1) [Example 1](#example_1)
+2) [Example 2](#example_2)
+3) [Example 3](#example_3)
+4) [Example 4](#example_4)
+5) [Example 5](#example_5)
+6) [Example 6](#example_6)
 
 ## <a id="example_1"></a>Example 1
 
@@ -33,7 +39,7 @@ skip 	| 720p
 
 > Applies knowledge of number expressions across computer science to tightly define the number format being matched. This solution overcomes the shortcomings in my solution.
 
-## Example 2
+## <a id="example_2"></a>Example 2
 
 #### Use Case
 
@@ -81,7 +87,7 @@ capture |	1 416 555 9292	| 4165559292
 
 > This works to reduce US Phone Numbers from the listed forms into just the ten digits that comprise the number. This method could do better though: extra whitespace around the hyphens would be problematic for this expression.
 
-## Example 3
+## <a id="example_3"></a>Example 3
 
 #### Use Case
 
@@ -111,7 +117,7 @@ capture	| hermione+regexone@hogwarts.com		| hermione
 >
 > The end result: an email name may contain any '.' characters, '_' characters, numbers or letters - in upper or lower case.
 
-## Example 4
+## <a id="example_4"></a>Example 4
 
 #### Use Case
 
@@ -145,7 +151,36 @@ match | ```<div>Hello <span>world</span></div>```
 
 > In truth, no significant html parsing should be accomplished by rolling your own RegEx. However, a RegEx which works similarly to a parser may be employed in certain use cases. The snippets provided by the solution on regexone.com give us some insight in how we can employ pseudo-parsing capture or validation.
 
-## Example 5
+## <a id="example_5"></a>Example 5
+
+#### Use Case
+
+Capture the name of the email and exclude the filter (+ character and string following it) and exclude the domain (@ character and string following it).
+
+task		| text								| capture
+------- | ------------------- | ----------
+skip		| .bash_profile				|
+skip		| workspace.doc 			|
+capture | img0912.jpg					| img0912, jpg
+capture | updated_img0912.png | updated_img0912, png
+skip 		| documentation.html 	|
+capture | favicon.gif					| favicon, gif
+skip 		| img0912.jpg.tmp 		|
+skip 		| access.lock 				|
+
+#### My Solution
+
+	^(\w+)\.(jpg|png|gif)$
+
+> There are some limits on acceptable file names that my RegEx can handle, but it seems an acceptable solution.
+
+#### The Solution
+
+	(\w+)\.(jpg|png|gif)$
+
+> Same expression; one less character. Of course a file name will begin at the start of a line, duh!
+
+## <a id="example_6"></a>Example 6
 
 #### Use Case
 
