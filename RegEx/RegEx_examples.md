@@ -184,12 +184,14 @@ skip 		| access.lock 				|
 
 #### Use Case
 
-Capture the name of the email and exclude the filter (+ character and string following it) and exclude the domain (@ character and string following it).
+Capture the content of each line without the extra whitespace.
 
 task		| text															| capture
 ------- | --------------------------------- | --------
 capture	|						The quick brown fox...	|	The quick brown fox...
 capture |	   jumped over the lazy dog.			| jumped over the lazy dog.
+
+> The additional leading and trailing whitespace is not deteced by markdown.
 
 #### My Solution
 
@@ -202,3 +204,5 @@ capture |	   jumped over the lazy dog.			| jumped over the lazy dog.
 	^\s*([\w\s.]*)\s*$
 
 > The RegEx captures any alphanumeric, whitespace, or '.' character while excluding the leading and trailing whitespace on the line.
+
+
