@@ -3,13 +3,13 @@
 function reverseString(str) {
 
 /* Solution 1 */
-/*
+
 	str = str.split('').reverse().join('');
 	console.log(str);
   return str;
-*/
 
 /* Solution 2 */
+	/*
 	var storage = [];
 	for(var i = str.length; i > 0; i--){
 		storage[i] = str.charAt(str.length - i);
@@ -23,5 +23,6 @@ function reverseString(str) {
 		}
 	}
 	return output;
-};
+	*/
+}
 reverseString("hello");
