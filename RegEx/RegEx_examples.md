@@ -4,12 +4,12 @@ A Practical Collection of Regular Expressions
 Practical Examples of Regular Expressions from regexone.com
 
 #### Examples
-1) [Example 1](#example_1)
-2) [Example 2](#example_2)
-3) [Example 3](#example_3)
-4) [Example 4](#example_4)
-5) [Example 5](#example_5)
-6) [Example 6](#example_6)
+1. [Example 1](#example_1)
+2. [Example 2](#example_2)
+3. [Example 3](#example_3)
+4. [Example 4](#example_4)
+5. [Example 5](#example_5)
+6. [Example 6](#example_6)
 
 ## <a id="example_1"></a>Example 1
 
