@@ -1,7 +1,7 @@
 A Practical Collection of Regular Expressions 
 =============================================
 
-Practical Examples of Regular Expressions from regexone.com
+Practical Examples of Regular Expressions from [RegexOne](http://regexone.com)
 
 #### Examples
 + [Example 1](#example_1)
@@ -136,7 +136,7 @@ match | ```<div>Hello <span>world</span></div>```
 
 > My solution cannot handle the full match to '```<div>Hello <span>world</span></div>```'. It only matches	'```<span>world</span>```'. I would need to expand the repitition of the tagging my RegEx can handle. Also, my use of '```http://```' could have been handled easier with '```w\://```' 
 >
-> As pointed out on regexone.com, both email and html parsing is tricky with many outlying use cases. It is best to use a well built and maintained library to parse email and html.
+> As pointed out on RegexOne, both email and html parsing is tricky with many outlying use cases. It is best to use a well built and maintained library to parse email and html.
 
 #### The Solution
 
@@ -149,7 +149,7 @@ match | ```<div>Hello <span>world</span></div>```
 	// Capture attribute values
 	='([\w://.]*)'
 
-> In truth, no significant html parsing should be accomplished by rolling your own RegEx. However, a RegEx which works similarly to a parser may be employed in certain use cases. The snippets provided by the solution on regexone.com give us some insight in how we can employ pseudo-parsing capture or validation.
+> In truth, no significant html parsing should be accomplished by rolling your own RegEx. However, a RegEx which works similarly to a parser may be employed in certain use cases. The snippets provided by the solution on RegexOne give us some insight in how we can employ pseudo-parsing capture or validation.
 
 ## <a id="example_5"></a>Example 5
 
@@ -186,25 +186,19 @@ skip 		| access.lock 				|
 
 Capture the name of the email and exclude the filter (+ character and string following it) and exclude the domain (@ character and string following it).
 
-task		| text								| capture
-------- | ------------------- | ----------
-skip		| .bash_profile				|
-skip		| workspace.doc 			|
-capture | img0912.jpg					| img0912, jpg
-capture | updated_img0912.png | updated_img0912, png
-skip 		| documentation.html 	|
-capture | favicon.gif					| favicon, gif
-skip 		| img0912.jpg.tmp 		|
-skip 		| access.lock 				|
+task		| text															| capture
+------- | --------------------------------- | --------
+capture	|						The quick brown fox...	|	The quick brown fox...
+capture |	   jumped over the lazy dog.			| jumped over the lazy dog.
 
 #### My Solution
 
-	^(\w+)\.(jpg|png|gif)$
+	// I failed to produce a working solution :(
 
-> There are some limits on acceptable file names that my RegEx can handle, but it seems an acceptable solution.
+> The option brackets and '*' wildcard did not come to mind when working out this solution. I will definitely use [RegExr](http://www.regexer.com) to develop and test my regular expressions for the near future.
 
 #### The Solution
 
-	(\w+)\.(jpg|png|gif)$
+	^\s*([\w\s.]*)\s*$
 
-> Same expression; one less character. Of course a file name will begin at the start of a line, duh!
+> The RegEx captures any alphanumeric, whitespace, or '.' character while excluding the leading and trailing whitespace on the line.
