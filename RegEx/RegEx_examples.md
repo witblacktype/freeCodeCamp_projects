@@ -31,7 +31,7 @@ skip 	| 720p
   
 	^-?\d+((\.|,|e)?(\d+)?){1,}$
 
-> Could be improved so that only one of each character 'e' and '.' can be present in the match.
+> Could be improved so that only one of each character ```e``` and ```.``` can be present in the match.
 
 #### The Solution
 
@@ -91,7 +91,7 @@ capture |	1 416 555 9292	| 4165559292
 
 #### Use Case
 
-Capture the name of the email and exclude the filter ('+' character and the following string) and exclude the domain ('@' character and the following string).
+Capture the name of the email and exclude the filter (```+``` character and the following string) and exclude the domain (```@``` character and the following string).
 
 task		| text															| capture
 ------- | --------------------------------- | ----------
@@ -113,9 +113,9 @@ capture	| hermione+regexone@hogwarts.com		| hermione
 
 	^([\w.]*)
 
-> This allows the email address to begin with an alphanumeric or a '.' character. The captured text will not include the '+' or '@' character or any string that follows either character.
+> This allows the email address to begin with an alphanumeric or a ```.``` character. The captured text will not include the ```+``` or ```@``` character or any string that follows either character.
 >
-> End Result: this RegEx can capture the name of an email sender provided the email name only contains '.' characters, '_' characters, numbers or letters - in upper or lower case.
+> End Result: this RegEx can capture the name of an email sender provided the email name only contains ```.``` characters, ```_``` characters, numbers or letters - in upper or lower case.
 
 ## <a id="example_4"></a>Example 4
 
@@ -197,12 +197,12 @@ capture |	   jumped over the lazy dog.			| jumped over the lazy dog.
 
 	// I failed to produce a working solution :(
 
-> The option brackets and '*' wildcard did not come to mind when working out this solution. I will definitely use [RegExr](http://www.regexer.com) to develop and test my regular expressions for the near future.
+> The option brackets and ```*``` wildcard did not come to mind when working out this solution. I will definitely use [RegExr](http://www.regexer.com) to develop and test my regular expressions for the foreseable future.
 
 #### The Solution
 
 	^\s*([\w\s.]*)\s*$
 
-> The RegEx captures any alphanumeric, whitespace, or '.' character while excluding the leading and trailing whitespace on the line.
+> The RegEx captures any alphanumeric, whitespace, or ```.``` character while excluding the leading and trailing whitespace on the line.
 
 
