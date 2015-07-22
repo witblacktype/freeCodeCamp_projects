@@ -91,7 +91,7 @@ capture |	1 416 555 9292	| 4165559292
 
 #### Use Case
 
-Capture the name of the email and exclude the filter ('+' character and string following it) and exclude the domain ('@' character and string following it).
+Capture the name of the email and exclude the filter ('+' character and the following string) and exclude the domain ('@' character and the following string).
 
 task		| text															| capture
 ------- | --------------------------------- | ----------
@@ -149,13 +149,13 @@ match | ```<div>Hello <span>world</span></div>```
 	// Capture attribute values
 	='([\w://.]*)'
 
-> In truth, no significant html parsing should be accomplished by rolling your own RegEx. However, a RegEx which works similarly to a parser may be employed in certain use cases. The snippets provided by the solution on RegexOne give us some insight in how we can employ pseudo-parsing capture or validation.
+> In truth, no significant html parsing should be accomplished by rolling your own RegEx. However, a RegEx which works similarly to a parser may be employed in certain use cases. The snippets provided by the solution on RegexOne give us some insight in how we can employ parsing for limited capture or validation.
 
 ## <a id="example_5"></a>Example 5
 
 #### Use Case
 
-Capture the filenames and extension types of only the image files: ```.jpg```, ```.gif```, ```.png```.
+Capture the filenames and extension types of only the image files ```.jpg```, ```.gif```, ```.png```.
 
 task		| text								| capture
 ------- | ------------------- | ----------
