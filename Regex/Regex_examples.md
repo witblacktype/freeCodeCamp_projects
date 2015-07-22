@@ -4,10 +4,10 @@ A Practical Collection of Regular Expressions
 Practical Examples of Regular Expressions from regexone.com
 
 ## Example 1
-<dl>
-  <dt>Use Case</dt>
-  <dd>Match any scientific, financial, or exponential number with a Regex</dd>
-</dl>
+
+#### Use Case
+
+Match any scientific, financial, or exponential number with a Regex.
 
 #### Requirements
 task	| text	      |
@@ -32,7 +32,7 @@ skip 	| 720p				|
 > Applies knowledge of number expressions across computer science to tightly define the number format being matched.
 
 ## Example 2
-<dl>
-  <dt>Use Case</dt>
-  <dd>Match a phone number</dd>
-</dl>
+
+#### Use Case
+
+Match a phone number.
