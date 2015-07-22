@@ -116,6 +116,7 @@ capture	| hermione+regexone@hogwarts.com		| hermione
 > This allows the email address to begin with an alphanumeric or a ```.``` character. The captured text will not include the ```+``` or ```@``` character or any string that follows either character.
 >
 > ###### End Result 
+>
 > This RegEx can capture the name of an email sender provided the email name only contains ```.``` characters, ```_``` characters, numbers or letters - in upper or lower case.
 
 ## <a id="example_4"></a>Example 4
@@ -198,7 +199,7 @@ capture |	   jumped over the lazy dog.			| jumped over the lazy dog.
 
 	// I failed to produce a working solution :(
 
-> The option brackets and ```*``` wildcard did not come to mind when working out this solution. I will definitely use [RegExr](http://www.regexer.com) to develop and test my regular expressions for the foreseable future.
+> The option brackets and ```*``` wildcard did not come to mind when working out this solution. I will definitely use [RegExr](http://regexer.com) to develop and test my regular expressions for the foreseable future.
 
 #### The Solution
 
