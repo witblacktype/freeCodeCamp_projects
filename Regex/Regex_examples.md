@@ -7,7 +7,7 @@ Practical Examples of Regular Expressions from regexone.com
 
 #### Use Case
 
-Match any scientific, financial, or exponential number with a Regex.
+Match any scientific, financial, or exponential number with a RegEx.
 
 #### Requirements
 task	| text	      |
@@ -29,7 +29,7 @@ skip 	| 720p				|
 
 	^-?\d+(,\d+)*(\.\d+(e\d+)?)?$
 
-> Applies knowledge of number expressions across computer science to tightly define the number format being matched.
+> Applies knowledge of number expressions across computer science to tightly define the number format being matched. This solution overcomes the shortcomings in my solution.
 
 ## Example 2
 
