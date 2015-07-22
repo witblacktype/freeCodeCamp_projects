@@ -107,4 +107,5 @@ capture	| hermione+regexone@hogwarts.com		| hermione
 	^([\w.]*)
 
 > This allows the email address to begin with an alphanumeric or a '.' character. The captured text will not include the '+' or '@' character or any string that follows either character.
+>
 > The end result: an email name may contain any '.' characters, numbers or letters - in upper or lower case.
