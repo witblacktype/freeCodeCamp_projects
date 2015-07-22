@@ -1,3 +1,6 @@
+/* Bonfire: Longest Word */
+/* Pair Programmed with Adam Rehard github.com/adamrehard */
+
 function findLongestWord(str) {
   
   var split_str = str.split(' ');

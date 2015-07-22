@@ -11,3 +11,4 @@ This is a public collection of the projects I completed while working through th
 #### Table of Contents
 
 1. Regular Expressions
+2. Bonfires

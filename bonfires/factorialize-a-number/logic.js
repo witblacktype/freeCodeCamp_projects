@@ -1,7 +1,11 @@
 /* Bonfire: Factorialize a Number */
 
 function factorialize(num) {
-  return num;
+  var F = 1;
+  for(var i = 2; i <= num; i++){
+  	F *= i;
+  }
+  return F;
 }
 
-factorialize(5);
+console.log(factorialize(5));
