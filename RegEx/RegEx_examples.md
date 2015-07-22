@@ -117,16 +117,24 @@ Capture the name of the email and exclude the filter (+ character and string fol
 
 task	| text
 ----- | ------
-match | <a>This is a link</a>
-match | <a href='http://regexone.com'>Link</a>
-match | <div class='test_style'>Test</div>
-match | <div>Hello <span>world</span></div>
+match | ```<a>This is a link</a>```
+match | ```<a href='http://regexone.com'>Link</a>```
+match | ```<div class='test_style'>Test</div>```
+match | ```<div>Hello <span>world</span></div>```
 
 #### My Solution
 
 	<\w+ ?\w*=?('|")?(http://|\w+)*?\.?(\w+)?('|")?>(\w|\s)*</\w+>
 
-> My solution cannot handle the full match to "<div>Hello <span>world</span></div>". It only matches "<span>world</span>". i would need to expand the repitiion of the tagging my RegEx can handle. 
+> My solution cannot handle the full match to
+
+	<div>Hello <span>world</span></div>
+
+> It only matches 
+
+	<span>world</span>
+
+> I would need to expand the repitition of the tagging my RegEx can handle. 
 >
 > As pointed out on regexone.com, both email and html parsing is tricky with many outlying use cases. It is best to use a well built and maintained library to parse email and html.
 
@@ -141,7 +149,7 @@ match | <div>Hello <span>world</span></div>
 	// Capture attribute values
 	='([\w://.]*)'
 
-> In truth, no significant html parsing should be accomplished by rolling your own RegEx. However, a RegEx which works similarly to a parser may be employed in certain use cases. The snippets provided by the solution on regexone.com give us some insight in how we employ pseudo-parsing capture or validation.
+> In truth, no significant html parsing should be accomplished by rolling your own RegEx. However, a RegEx which works similarly to a parser may be employed in certain use cases. The snippets provided by the solution on regexone.com give us some insight in how we can employ pseudo-parsing capture or validation.
 
 ## Example 5
 
