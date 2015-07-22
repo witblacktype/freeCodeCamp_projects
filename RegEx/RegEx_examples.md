@@ -83,4 +83,28 @@ capture |	1 416 555 9292	| 4165559292
 
 #### Use Case
 
-Matching emails.
+Capture the name of the email and exclude the filter (+ character and string following it) and exclude the domain (@ character and string following it).
+
+
+task		| text															| capture
+--------|-----------------------------------|-----------
+capture	| tom@hogwarts.com									| tom
+capture	| tom.riddle@hogwarts.com						| tom.riddle
+capture	| tom.riddle+regexone@hogwarts.com 	| tom.riddle
+capture	| tom@hogwarts.eu.com								| tom
+capture	| potter@hogwarts.com								| potter
+capture	| harry@hogwarts.com								| harry
+capture	| hermione+regexone@hogwarts.com		| hermione
+
+#### My Solution
+
+	(\w+\.?\w+)
+
+> I knew this could be better but was struggling to get this one out.
+
+#### The Solution
+
+	^([\w.]*)
+
+> This allows the email address to begin with an alphanumeric or a '.' character. The captured text will not include the '+' or '@' character or any string that follows either character.
+> The end result: an email name may contain any '.' characters, numbers or letters - in upper or lower case.
