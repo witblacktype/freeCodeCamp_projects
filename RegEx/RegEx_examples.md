@@ -116,7 +116,6 @@ capture	| hermione+regexone@hogwarts.com		| hermione
 > This allows the email address to begin with an alphanumeric or a ```.``` character. The captured text will not include the ```+``` or ```@``` character or any string that follows either character.
 >
 > ###### End Result 
->
 > This RegEx can capture the name of an email sender provided the email name only contains ```.``` characters, ```_``` characters, numbers or letters - in upper or lower case.
 
 ## <a id="example_4"></a>Example 4
