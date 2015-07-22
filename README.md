@@ -10,4 +10,4 @@ This is a public collection of the projects I completed while working through th
 
 #### Table of Contents
 
-1. Cash Register
+1. Regular Expressions
