@@ -64,13 +64,13 @@ capture |	1 416 555 9292	| 416
 
 	(\d{3})
 
-> The opening parenthesis option in my solution is unneccessary. Merely capturing the first group of three digits will accomplish this task.
+> This expression captures the first group of three digits.
 
 ## Example 2 Challenge
 
 #### Use Case
 
-Using the same phone number data from example 2, capture all digits of the phone number only: assume this string will be used for robo-dialing.
+Using the same phone number data from Example 2, capture all digits of the phone number only: assume this string will be used for robo-dialing.
 
 task		|	text						| capture
 ------- | --------------- | -------
@@ -91,7 +91,7 @@ capture |	1 416 555 9292	| 4165559292
 
 #### Use Case
 
-Capture the name of the email and exclude the filter (+ character and string following it) and exclude the domain (@ character and string following it).
+Capture the name of the email and exclude the filter ('+' character and string following it) and exclude the domain ('@' character and string following it).
 
 task		| text															| capture
 ------- | --------------------------------- | ----------
@@ -115,13 +115,13 @@ capture	| hermione+regexone@hogwarts.com		| hermione
 
 > This allows the email address to begin with an alphanumeric or a '.' character. The captured text will not include the '+' or '@' character or any string that follows either character.
 >
-> The end result: an email name may contain any '.' characters, '_' characters, numbers or letters - in upper or lower case.
+> End Result: this RegEx can capture the name of an email sender provided the email name only contains '.' characters, '_' characters, numbers or letters - in upper or lower case.
 
 ## <a id="example_4"></a>Example 4
 
 #### Use Case
 
-Capture the name of the email and exclude the filter (+ character and string following it) and exclude the domain (@ character and string following it).
+Match the tags and content from the html.
 
 task	| text
 ----- | ------
@@ -155,7 +155,7 @@ match | ```<div>Hello <span>world</span></div>```
 
 #### Use Case
 
-Capture the name of the email and exclude the filter (+ character and string following it) and exclude the domain (@ character and string following it).
+Capture the filenames and extension types of only the image files: ```.jpg```, ```.gif```, ```.png```.
 
 task		| text								| capture
 ------- | ------------------- | ----------
