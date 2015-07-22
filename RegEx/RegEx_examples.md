@@ -48,9 +48,9 @@ capture |	1 416 555 9292	| 416
 
 #### My Solution
 
-	\)?(\d{3})
+	(\d{3})
 
-> My expression matches the first three numbers in a group found after a possible opening parenthesis.
+> My expression matches the solution...this time.
 
 #### The Solution
 
@@ -85,9 +85,8 @@ capture |	1 416 555 9292	| 4165559292
 
 Capture the name of the email and exclude the filter (+ character and string following it) and exclude the domain (@ character and string following it).
 
-
 task		| text															| capture
---------|-----------------------------------|-----------
+------- | --------------------------------- | ----------
 capture	| tom@hogwarts.com									| tom
 capture	| tom.riddle@hogwarts.com						| tom.riddle
 capture	| tom.riddle+regexone@hogwarts.com 	| tom.riddle
@@ -108,4 +107,67 @@ capture	| hermione+regexone@hogwarts.com		| hermione
 
 > This allows the email address to begin with an alphanumeric or a '.' character. The captured text will not include the '+' or '@' character or any string that follows either character.
 >
-> The end result: an email name may contain any '.' characters, numbers or letters - in upper or lower case.
+> The end result: an email name may contain any '.' characters, '_' characters, numbers or letters - in upper or lower case.
+
+## Example 4
+
+#### Use Case
+
+Capture the name of the email and exclude the filter (+ character and string following it) and exclude the domain (@ character and string following it).
+
+task	| text
+----- | ------
+match | <a>This is a link</a>
+match | <a href='http://regexone.com'>Link</a>
+match | <div class='test_style'>Test</div>
+match | <div>Hello <span>world</span></div>
+
+#### My Solution
+
+	<\w+ ?\w*=?('|")?(http://|\w+)*?\.?(\w+)?('|")?>(\w|\s)*</\w+>
+
+> My solution cannot handle the full match to "<div>Hello <span>world</span></div>". It only matches "<span>world</span>". i would need to expand the repitiion of the tagging my RegEx can handle. 
+>
+> As pointed out on regexone.com, both email and html parsing is tricky with many outlying use cases. It is best to use a well built and maintained library to parse email and html.
+
+#### The Solution
+
+	// Capture a tag
+	<(\w+)
+
+	// Capture tag contents
+	>([\w\s]*)<
+
+	// Capture attribute values
+	='([\w://.]*)'
+
+> In truth, no significant html parsing should be accomplished by rolling your own RegEx. However, a RegEx which works similarly to a parser may be employed in certain use cases. The snippets provided by the solution on regexone.com give us some insight in how we employ pseudo-parsing capture or validation.
+
+## Example 5
+
+#### Use Case
+
+Capture the name of the email and exclude the filter (+ character and string following it) and exclude the domain (@ character and string following it).
+
+task		| text								| capture
+------- | ------------------- | ----------
+skip		| .bash_profile				|
+skip		| workspace.doc 			|
+capture | img0912.jpg					| img0912, jpg
+capture | updated_img0912.png | updated_img0912, png
+skip 		| documentation.html 	|
+capture | favicon.gif					| favicon, gif
+skip 		| img0912.jpg.tmp 		|
+skip 		| access.lock 				|
+
+#### My Solution
+
+	^(\w+)\.(jpg|png|gif)$
+
+> There are some limits on acceptable file names that my RegEx can handle, but it seems an acceptable solution.
+
+#### The Solution
+
+	(\w+)\.(jpg|png|gif)$
+
+> Same expression; one less character. Of course a file name will begin at the start of a line, duh!
