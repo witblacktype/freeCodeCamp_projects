@@ -1,20 +1,25 @@
 /* Bonfire: Chunky Monkey */
 
 function chunk(arr, size) {
-  // Break it up.
   var multi = [];
-  var outer;
-  var inner;
+  var inner = [];
   var count = 0;
   for (var i = 0; i < arr.length; i++){
-  	
-  	 
-
-  	
+  	if ( count < size){
+  		inner.push(arr[i]);
+  		count++;
+  		if (inner.length == size){
+  			multi.push(inner);
+  			inner = [];
+  			count = 0;
+			}
+			else if( i + 1 == arr.length){
+				multi.push(inner);
+  			inner = [];
+  			count = 0;
+			}	
+  	}
   }
-  console.log(count);
-  console.log(multi);
-  return arr;
+  return multi;
 }
-
-chunk(['a', 'b', 'c', 'd'], 2);
+chunk([0, 1, 2, 3, 4, 5], 4);
