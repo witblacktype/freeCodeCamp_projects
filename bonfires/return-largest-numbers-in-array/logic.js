@@ -1,4 +1,4 @@
-
+/* Bonfire: Return Largest Number in an Array */
 
 function largestOfFour(arr) {
 	var big = [];
