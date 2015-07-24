@@ -12,11 +12,11 @@ function chunk(arr, size) {
   			multi.push(inner);
   			inner = [];
   			count = 0;
-			}
+      }
       else if( i + 1 == arr.length){
 				multi.push(inner);
   			inner = [];
-  			count = 0;
+        count = 0;
 			}	
   	}
   }

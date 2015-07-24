@@ -1,8 +1,7 @@
 /* Bonfire: Slasher Flick */
 
 function slasher(arr, howMany) {
-  // it doesn't always pay to be first
+	arr = arr.splice(howMany, arr.length - howMany);
   return arr;
 }
-
-slasher([1, 2, 3], 2);
+slasher([1, 2, 3], 9);

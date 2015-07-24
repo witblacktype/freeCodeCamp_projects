@@ -1,6 +1,20 @@
 /* Bonfires: Title Case a Sentence */
 
 function titleCase(str) {
+newArray = str.split(' ');
+  console.log(newArray);
+  for(i = 0; i < newArray; i++){
+    newArray[i].charAt(0).toUpperCase();
+    newArray.join(str);
+  }
+  console.log(str);
+  return str;
+}
+
+titleCase("I'm a little tea pot");
+
+/*
+function titleCase(str) {
   function cap(match){
 		match = match.toUpperCase();
 		return match;
@@ -9,3 +23,4 @@ function titleCase(str) {
   return str;
 }
 titleCase("I'm a little tea pot");
+*/
