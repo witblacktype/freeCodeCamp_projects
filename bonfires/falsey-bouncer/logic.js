@@ -1,18 +1,15 @@
 /* Bonfire: falsey bouncer */
 
 function bouncer(arr) {
-
-
-	function falsey(){
-
+	function falsey(A){
+		if (A == false || A == null) {
+			return false;
+		}
+		else{
+			return true;	
+		}
 	}
-
-  var b = arr.filter(falsey);
-  
-
-
-
+  arr = arr.filter(falsey);
   return arr;
 }
-
 bouncer([7, 'ate', '', false, 9]);
