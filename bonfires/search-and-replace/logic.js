@@ -1,4 +1,4 @@
-/* Bonfire: Reverse a String */
+/* Bonfire: Search and Replace */
 
 function replace(str, before, after) {
 	if (str.search(before) != -1){
