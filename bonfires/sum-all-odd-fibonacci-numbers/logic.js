@@ -2,10 +2,8 @@
 
 function sumFibs(num) {
 
-	var f1 = 1;
-	var f2 = 1;
-
-	function fib(){
+	var tmp = num;
+	while (num > 2){
 		
 	}
 
