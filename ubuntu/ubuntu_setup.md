@@ -32,7 +32,7 @@ I find this more comfortable without feeling 'big' on my 13" Macbook than the re
 
 Docs: The man pages. Run the following command in the shell to access them.
 
-  $ man xrandr
+    $ man xrandr
 
 ### Connect to WiFi
 
