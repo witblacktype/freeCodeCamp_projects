@@ -27,7 +27,7 @@ The asterisk ```*``` marks the current resolution. The marks ```+``` the recomme
 
 #### My Solution
 
-	^-?\d+((\.|,|e)?(\d+)?){1,}$
+	$ xrandr
 
 
 
