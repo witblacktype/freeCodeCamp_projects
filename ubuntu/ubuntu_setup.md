@@ -53,7 +53,9 @@ Now we can install the programs we need using apt-get. My two primary tools will
 I will use Atom as my text editor because it is free, easy to acquire (courtesy of webupd8.org) and 'hackable'. 'Hackable' has to mean it is awesome, right? I had never used it myself before this setup.
 
   $ sudo add-apt-repository ppa:webupd8team/atom
+
   $ sudo apt-get update
+
   $ sudo apt-get install atom
 
 ### Rearrange the dock
@@ -73,6 +75,7 @@ Once I figured out that the shortcut ```ctrl``` + ```tab``` did in fact cycle th
 Let's keep it simple. This project will live in your home.
 
   $ cd ~
+
   $ git clone https://github.com/[github_username]/[repo_name].git
 
 ### Configure the upstream branch
@@ -98,6 +101,7 @@ Install the extension.
 ### Open your project in Atom and start working
 
   $ cd ~
+  
   $ atom [repo_name]
 
 ### Conclusion
