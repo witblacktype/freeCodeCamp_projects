@@ -10,17 +10,31 @@ These are the basic assumptions I am using to direct my workflow and tooling.
 + I have a WiFi network available and the proper credentials to connect to the network.
 + The project I want to work on is on Github and password authentication is acceptable for transmission.
 + I am comfortable entering commands into the terminal and have a solid understanding of all commands being invoked with sudo.
-+ I do not need a GUI for managing my projet with git.
++ I do not need a GUI for managing my project with git.
 + My project does not need any compiler or pre-compiler.
 + My project will be able to be served locally by Firefox (ie. there are no server or database requirements for running my project).
 
 ### My Relevant Background
 
-I have used Ubuntu before to download and use an IDE for coding C++ in a math class. My experience in Ubuntu or any Linux distribution is close to zero. I have never used any Linux distribution since acquiring any skills on a command line. I acquired my basic Unix-like skills in OS X on the command line knowing the transferability of the skills and the accessibility of tools like the bash shell and git across various Unix-like operating systems.
+I have only ever used Ubuntu before to download and use an IDE for coding C++ in a math class. My experience in Ubuntu or any Linux distribution is close to zero. I have never used any Linux distribution since acquiring any skills on a command line. I acquired my basic Unix-like skills in OS X on the command line knowing the transferability of the skills and the accessibility of tools like bash and git across various Unix-like operating systems.
 
 ### My Motivation
 
-I
+I had just created an Ubuntu usb that was bootable on a Mac. In attempting to load Ubuntu from the usb, I deleted everything off of my Mac and installed the usb version of Ubuntu on my Mac. All is not lost: I have time machine backups on another device and most of my recent work has all been pushed to Github. I cannot (or do not know how to) run Ubuntu from the usb and the operating system on my computer does not work. Until I can reinstall OS X, the only way I can manage to run an operating system on my Mac is the trial version of Ubuntu.
+
+    Hello non-persistant World
+
+When I showed off my workflow for a non-persistant OS, my design partner told me it was very 'cyber punk'. I took that as a compliment.
+
+I can just keep working with the project I have been hosting on Github if I have the minimum tools necessary and can push my changes to Github - since removing the usb or powering down my computer will destroy any changes made to the trial operating system. The objective is to streamline acquiring the base development tools for a Github-hosted project. I also included a few tweaks that I feel have a major impact in optimizing my workflow based on my current OS X dev workflow.
+
+### For the Security Conscious Noob
+
+When following instructions you find online, you should be skeptical of their value, accuracy and intent. When following this guide or any other 'suspect' resource, use the [RSAP](http://www.freecodecamp.com/field-guide/how-do-i-get-help-when-i-get-stuck) method to verify the information provided by your resource. Additionally, the ```sudo``` command can override permissions and allow very consequential commands to be executed. Whenever any guide tells you to run a command that begins with ```sudo```, I recommend verifying the advice via a second source and fully understanding what the command will do when executed. If you are told to download something from the internet, use RSAP to find the site for the official download instead of downloading from a provided link which may be questionable regarding its authenticity.
+
+### This Guide's Value to You
+
+I wrote this guide after 48 hours of working in the non-persistant environment I had unfortunately created. This quick setup has allowed me to continue with my work and write this guide without a reliable local save function. This setup is fast and focused on getting back to work in your new Ubuntu Linux OS.
 
 ## <a id="11-steps"></a>11 Steps to Start Working on a Github hosted project from a clean install of Ubuntu
 
@@ -30,9 +44,9 @@ I found the default screen resolution uncomfortably small. Check the current res
 
     $ xrandr
 
-The asterisk ```*``` marks the current resolution. The marks ```+``` the recommended resolution(s).
+The ```*``` asterisk marks the current resolution. The ```+``` plus marks the recommended resolution(s).
 
-Passing the size ```-s``` option we can set the resolution to our choice.
+Passing the ```-s``` size option we can set the resolution to our choice.
 
     $ xrandr -s 1920x1200
 
@@ -48,9 +62,9 @@ Once severe eyestrain has been relieved, we need to access valuable things from 
 
 Open the system settings from the dock. It's the gear and wrench icon. Select Software and Updates and select the Additional Drivers tab. Wait for any available drivers to be located. Select the driver provided and Apply Changes.
 
-Select the WiFi icon in the upper dock. It is the signal icon that looks like a piece of pie. Selecting on it, you should see a list of visible WiFi networks in range. If you do not, I found that toggling the selected driver off and back on solved the trick on more than one occasion.
+Select the WiFi icon in the upper dock. It is the signal icon that looks like a piece of a pie. Selecting on it, you should see a list of visible WiFi networks in range. If you do not see the available networks, I found that toggling the selected driver off and back on solved the trick on more than one occasion.
 
-Select your desired network and authenticate as necessary. Open Firefox and navigate to a website to verify that you can connect to the internet resources.
+Select your desired network and authenticate as necessary. Open Firefox and navigate to a website to verify that you can connect to internet resources.
 
 Navigate to [Firebug](http://getfirebug.com/) ```http://getfirebug.com/``` in Firefox.
 
@@ -62,7 +76,11 @@ If you did not connect to the Firebug page with the available link to download, 
 
 Link to RSAP method to problem solving: http://www.freecodecamp.com/field-guide/how-do-i-get-help-when-i-get-stuck
 
-Text-only links have been provided in addition to the linsk to this point for you to easily read the url's considering that you might be reading this from a device other than the one running Ubuntu that you are setting up. Once your internet connection is established, open this guide in Firefox on your Ubuntu machine: [Ubuntu Setup](https://github.com/witblacktype/freeCodeCamp_projects/blob/master/ubuntu/ubuntu_setup.md) https://github.com/witblacktype/freeCodeCamp_projects/blob/master/ubuntu/ubuntu_setup.md.
+Text-only links have been provided in addition to the links to this point for you to easily read the url's considering that you might be reading this from a device other than the one running Ubuntu that you are setting up. Once your internet connection is established, open this guide [Ubuntu Setup](https://github.com/witblacktype/freeCodeCamp_projects/blob/master/ubuntu/ubuntu_setup.md) in Firefox on your Ubuntu machine
+
+Link: https://github.com/witblacktype/freeCodeCamp_projects/blob/master/ubuntu/ubuntu_setup.md.
+
+On your new Ubuntu machine, clicking on any highlighted text in this document will open up the link with Firefox.
 
 ### Install Firebug for a Browser Debugging Tool
 
