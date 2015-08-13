@@ -1,7 +1,7 @@
 Fast Development Setup in Ubuntu to Start Working Now
 =====================================================
 
-If you found this from a search, the following few sections describe the reasoning behind why this was valuable to me and how it might be valuable to you. I hope it helps. Otherwise, skip this silliness and get to the setup [11 Steps](#11-steps)
+If you found this from a search, the following few sections describe the reasoning behind why this was valuable to me and how it might be valuable to you. I hope it helps. Otherwise, skip this silliness and get to the setup [10 Steps](#11-steps)
 
 ### Starting Point
 
@@ -36,7 +36,7 @@ When following instructions you find online, you should be skeptical of their va
 
 This setup is fast and focused on getting back to work in a new Ubuntu Linux OS. I wrote this guide after 48 hours of working in the non-persistant environment I had unfortunately created. This quick setup has allowed me to continue with my work and write this guide without a reliable local save function. Whether you are booting into Ubuntu for the first time or evaluating the trial version, this guide is intended to get you into a development workflow on Ubuntu quickly.
 
-## <a id="11-steps"></a>11 Steps to Start Working on a Github hosted project from a clean install of Ubuntu
+## <a id="10-steps"></a>10 Steps to Start Working on a Github hosted project from a clean install of Ubuntu
 
 ### Adjust Screen Resolution
 
@@ -218,7 +218,7 @@ Writing these algorithms is my current project in progress. This setup exists so
 - Open project in Atom with ```ctrl``` + ```o``` or from the shell ```$ atom [directory_name]```.
 - Open the appropriate index.html file in Firefox.<br>
   There are many ways to do this quickly.
-  1. From Atom, right-click on the file in Atom project browser. Then select the file from the Ubuntu file browser and press ```ctrl``` + ```o``` to open in the default browser (Firefox).
+  1. From Atom, right-click on the file in Atom project browser and select 'Show in File Manager'. Then select the file from the Ubuntu file browser and press ```ctrl``` + ```o``` to open in the default browser (Firefox).
   2. From Firefox, press ```ctrl``` + ```o``` to open a file. Find and select it from the Ubuntu file browser and press ```return``` to open it with Firefox.
   3. From Terminal, ```$ firefox ~/[repo_name]/[path]/[to]/[file]/index.html```. Fill in the appropriate path and done.
 - In Firefox, open the Firebug debugging console ```f12```.
@@ -227,7 +227,7 @@ Writing these algorithms is my current project in progress. This setup exists so
 - Reload index.html in Firefox ```ctrl``` + ```r```.
 - Debug your javascript using the Firebug debugging console. THE OTHER REAL WORK IS DOWN HERE.
 - Commit changes to your working branch ```$ git commit -am "Edit File X"```.
-- Push your branch to the remote repo on Github ```git push```. Use password authentication for pushing to Github.
+- Push your branch to the remote repo on Github ```$ git push```. Use password authentication for pushing to Github.
 
 This workflow benefits by not needing any compiler, server or database to serve the code. In practice, making changes and debugging the changes is the only real work being done. The rest is setting up the project, tools and version control.
 
@@ -238,11 +238,11 @@ This workflow benefits by not needing any compiler, server or database to serve 
 After acclimating to my new environment and armed with notes from my setup, I wanted to create a guide on Github for my own reference in the future and for the possible benefit of others.
 
 - Open project in Atom.
-- In Firefox, navigate to the web address (on Github) for the markdown file you are editing. For example, navigate to  ```http://github/[username]/[repo_name]/README.md``` to view the README file for the repository.
+- In Firefox, navigate to the web address (on Github) for the markdown file you are editing. For example, if you were editing the repository README file, you would navigate to  ```http://github/[username]/[repo_name]/README.md``` to view the README file for the repository.
 - Make changes to the project in Atom. DO REAL WORK HERE.
 - Save changes in Atom ```ctrl``` + ```s```.
-- Commit changes to your working branch ```git commit -am "Edit File X"```.
-- Push your branch to the remote repo on Github ```git push```. Use password authentication.
+- Commit changes to your working branch ```$ git commit -am "Edit File X"```.
+- Push your branch to the remote repo on Github ```$ git push```. Use password authentication.
 - Reload the markdown file on Github in Firefox ```ctrl``` + ```r```.
 - Inspect the markdown formatting for expected output. THE OTHER REAL WORK IS HERE.
 
