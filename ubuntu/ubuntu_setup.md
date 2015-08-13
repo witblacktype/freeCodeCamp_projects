@@ -20,16 +20,9 @@ Personally, this is my first time working in a Linux distro when I have not been
 
 I found the default screen resolution uncomfortably small. Check the current resolution and available resolution settings.  The command ```xrandr``` with no arguments will list the screen resolutions available and information about your screen settings.
 
-  $ xrandr
-
-The asterisk ```*``` marks the current resolution. The marks ```+``` the recommended resolution(s).
-
-
-#### My Solution
-
 	$ xrandr
 
-
+The asterisk ```*``` marks the current resolution. The marks ```+``` the recommended resolution(s).
 
 Passing the size ```-s``` option we can set the resolution to our choice.
 
