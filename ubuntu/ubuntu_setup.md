@@ -20,13 +20,13 @@ Personally, this is my first time working in a Linux distro when I have not been
 
 I found the default screen resolution uncomfortably small. Check the current resolution and available resolution settings.  The command ```xrandr``` with no arguments will list the screen resolutions available and information about your screen settings.
 
-	$ xrandr
+    $ xrandr
 
 The asterisk ```*``` marks the current resolution. The marks ```+``` the recommended resolution(s).
 
 Passing the size ```-s``` option we can set the resolution to our choice.
 
-	$ xrandr -s 1920x1200
+    $ xrandr -s 1920x1200
 
 I find this more comfortable without feeling 'big' on my 13" Macbook than the recommended resolution of ```2560x1600```.
 
@@ -53,21 +53,21 @@ Install the extension.
 
 Welcome to your Ubuntu package manager apt-get. It will install, update, configure, and remove programs. First thing is to update it.
 
-  $ sudo apt-get update
+    $ sudo apt-get update
 
 ### Install Development Tools  
 
 Now we can install the programs we need using apt-get. My two primary tools will be git and a text editor. Let's get git first. Say that ten times fast.
 
-  $ sudo apt-get install git
+    $ sudo apt-get install git
 
 I will use Atom as my text editor because it is free, easy to acquire (courtesy of webupd8.org) and 'hackable'. 'Hackable' has to mean it is awesome, right? I had never used it myself before this setup.
 
-  $ sudo add-apt-repository ppa:webupd8team/atom
+    $ sudo add-apt-repository ppa:webupd8team/atom
 
-  $ sudo apt-get update
+    $ sudo apt-get update
 
-  $ sudo apt-get install atom
+    $ sudo apt-get install atom
 
 ### Rearrange the dock
 
@@ -85,29 +85,33 @@ Once I figured out that the shortcut ```ctrl``` + ```tab``` did in fact cycle th
 
 Let's keep it simple. This project will live in your home.
 
-  $ cd ~
+    $ cd ~
 
-  $ git clone https://github.com/[github_username]/[repo_name].git
+    $ git clone https://github.com/[github_username]/[repo_name].git
 
 ### Configure the upstream branch
 
 First, run the following command to see the details of the remote repositories.
 
-  $ git remote -v
+    $ git remote -v
 
 The verbose ```-v``` option displays the details in addition to the names of the remotes.
 
 Run the following command to add the upstream branch.
 
-  $ git remote add upstream https://github.com/[github_username]/[repo_name].git
+    $ git remote add upstream https://github.com/[github_username]/[repo_name].git
 
 If you run ```git remote -v``` again, you will now see the upstream branch as well.
 
+### It is good practice to
+
+    $ git
+
 ### Open your project in Atom and start working
 
-  $ cd ~
+    $ cd ~
 
-  $ atom [repo_name]
+    $ atom [repo_name]
 
 ### Conclusion
 
