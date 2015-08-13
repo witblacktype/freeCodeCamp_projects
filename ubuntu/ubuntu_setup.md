@@ -9,7 +9,7 @@ These are the basic assumptions I am using to direct my workflow and tooling.
 
 + I have a WiFi network available and the proper credentials to connect to the network.
 + The project I want to work on is on Github and password authentication is acceptable for transmission.
-+ I am comfortable entering commands into the terminal and have a solid understanding of all commands being invoked with ```sudo```.
++ I am comfortable entering commands into the terminal and have a solid understanding of all commands being invoked with ```sudo```. If not, I am willing to suffer the consequences of my own mistakes.
 + The terminal is a suitable environment for managing my project with git.
 + My project does not need any compiler or pre-compiler.
 + My project will be able to be served locally by Firefox (ie. there are no server or database requirements for running my project).
@@ -38,7 +38,7 @@ This setup is fast and focused on getting back to work in a new Ubuntu Linux OS.
 
 ## <a id="11-steps"></a>11 Steps to Start Working on a Github hosted project from a clean install of Ubuntu
 
-### Adjust screen resolution
+### Adjust Screen Resolution
 
 I found the default screen resolution uncomfortably small. Check the current resolution and available resolution settings. The command ```xrandr``` with no arguments will list the screen resolutions available and information about your screen settings.
 
@@ -88,7 +88,7 @@ Download [Firebug](http://getfirebug.com) from ```http://getfirebug.com/```
 
 Once downloaded, click on the download to install the Firebug extension for Firefox.
 
-### Update the package manager
+### Update the Package Manager
 
 Welcome to your Ubuntu package manager ```apt-get```. It will install, update, configure, and remove programs. First thing is to update it.
 
@@ -114,7 +114,7 @@ I also want to be able to copy and paste between the shell and Atom. For that, w
 
 After a few hours in Ubuntu, I fully understand how OS X not shipping with a package manager feels like a huge oversight from a developer perspective. Previously, it felt like a minor oversight having never used Linux from the command line. The Mac Homebrew slogan "The missing package manager for OS X" now feels fully deserved after using ```apt-get``` which is standard to Debian-based Linux distributions.
 
-### Rearrange the dock
+### Rearrange the Dock
 
 Once I figured out that the shortcut ```cmd``` + ```tab``` did, in fact, cycle through programs, albeit differently from OS X, I rearranged my dock to prioritize my dev tools for a faster workflow. The Mac ```cmd``` key and the Windows ```window``` key are known in Linux as the ```super``` key. The shortcut ```super``` + ```tab``` will cycle through programs in the dock - to keep your fingers on the keyboard, where they rock.
 
@@ -131,14 +131,18 @@ To edit the order of programs in the dock, click and hold on an item in the dock
 - system settings
 - devices
 
-### Clone a Project to work on
+### Clone a Project in Progress
 
 Let's keep it simple. This project will live in your home.
+
 
     $ cd ~
     $ git clone https://github.com/[github_username]/[repo_name].git
 
-### Configure the upstream branch
+If this stuff is easy for you, put it wherever you like but note the instructions following may be slightly different for you as a result.
+
+
+### Configure the Upstream Branch
 
 First, run the following command to see the details of the remote repositories. Move to the git project directory and list the remote repositories. You may run a ```git status``` at any time while working with git.
 
@@ -153,17 +157,17 @@ Run the following command to add the upstream branch.
 
 If you run ```git remote -v``` again, you will now see the upstream branch as well.
 
-### It is good practice to create your own branch
+### You Should Probably Create Your Own Branch
 
 I imagine that if Linus Torvalds were here, he would point out how much our code sucks. He would also show us how we could work with our sucky code in a little corner and not disturb the more gifted among us. Create your own branch! Now your sucky code can live in it's own sucky world like my code. If your code doesn't suck, other people may care.
 
     $ git checkout -b iSuck
 
-Now no one will mess with your branch. If your code is actually good, you can just create a new branch called something more dignified. However, you would already know how to do that and this guide might be a total waste of your time, but I digress. If you suck, embrace the suck. Before long, you will suck much less.
+Now no one will mess with your branch. If your code is actually good, you can just create a new branch called something more dignified. However, you would already know how to do that and this guide might be a total waste of your time, but I digress. If you suck, embrace the suck. Before long, you will suck less.
 
 For those with branch allergens, if you are the sole contributer to a project, you can just commit on master like a boss. That's how this repo got built just for speed of development's sake.
 
-### Open your project in Atom and start working
+### Open Project in Atom and Get to Work
 
 Now that you are on your own branch or plan to commit on master like it aint no thang, open your project and begin work.
 
@@ -185,7 +189,7 @@ The two main tasks that comprise each workflow:
 
 ##### Use Case # 1
 
-Develop a javascript algorithm locally and save work to a Github repo.
+*Develop a javascript algorithm locally and save work to a Github repo.*
 
 Writing these algorithms is my current project in progress. This setup exists so I can get on with this task.
 
@@ -207,7 +211,7 @@ This workflow benefits by not needing any compiler, server or database to serve 
 
 ##### Use Case # 2
 
-Develop a markdown document locally and push the document to github for online viewing.
+*Develop a markdown document locally and push the document to github for online viewing.*
 
 After acclimating to my new environment and armed with notes from my setup, I wanted to create a guide on Github for my own reference in the future and for the possible benefit of others.
 
@@ -222,6 +226,8 @@ After acclimating to my new environment and armed with notes from my setup, I wa
 
 Since the markdown needs to be compiled to html, we will just let Github handle that for us. By committing our changes and pushing them to Gitub, we can inspect the html display of our markdown file. Like the first workflow, the only real work being done here is making changes and inspecting the output of those changes, in this case, html.
 
+Firebug may still be used for inspecting the html, but when I review markdown developed in this manner, I employ an editing process focused on reading the document more than a debugging process focused on inspecting it with Firebug.
+
 ##### Bonus Points to Turbocharge Your Workflow
 
 Use ```super``` + ```tab``` to switch between programs in your workflow. While holding down on ```super```, each press of the ```tab``` key will cycle to the next program in the dock. ```super``` + ```shift``` + ```tab``` will cycle through the programs in reverse order.
@@ -230,6 +236,4 @@ Use ```super``` + ```tab``` to switch between programs in your workflow. While h
 
 For a new user to Ubuntu with a fresh install, it does not take long to set up the minimum tools to work collaboratively on a project managed under git, and this setup is mindful of a usable workflow.
 
-This workflow could be improved significantly with a couple more steps. The next steps I would take would be to setup SSH to handle my Github authentication. Then, I would remap the ```caps lock``` key to be another ```ctrl``` key. That's my happy-place for a basic workflow setup.
-
-_
+This workflow could be improved significantly with a couple more steps. The next step would be setup SSH to handle Github authentication. Then, I would remap the ```caps lock``` key to be another ```ctrl``` key. That's my happy-place for a basic workflow setup.
