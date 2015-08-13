@@ -147,12 +147,11 @@ To edit the order of programs in the dock, click and hold on an item in the dock
 - system settings
 - devices
 
-Docs: I was unable to find anything resembling 'documentation'. I just figured this out, but I'm sure some YouTube pros have guides to "Set up Ubuntu Unity Desktop", provided said pros don't hate the Unity desktop.
+Docs: I was unable to find anything resembling 'documentation'. I just figured this out, but you could check these seemingly-relevant docs: [Ubuntu Official Documentation - Ubuntu Desktop Guide](https://help.ubuntu.com/stable/ubuntu-help/).
 
 ### Clone a Project in Progress
 
 Let's keep it simple. This project will live in your home.
-
 
     $ cd ~
     $ git clone https://github.com/[github_username]/[repo_name].git
@@ -200,8 +199,6 @@ Now that you are on your own branch or plan to commit on master like it aint no 
 ## Off to Work
 
 Now that your new Ubuntu machine is setup for work, I will cover how I leverage this setup in my workflow.
-
-Docs: [Ubuntu Official Documentation - Ubuntu Desktop Guide](https://help.ubuntu.com/stable/ubuntu-help/)
 
 ### The Workflow
 
