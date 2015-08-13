@@ -118,15 +118,23 @@ The Debian-based Atom distribution is available on [Github from the Atom team](h
 
 Docs: [Atom Official Documentation](https://atom.io/docs)
 
-I also want to be able to copy and paste between the shell and Atom. For that, we will install ```xclip```. Like installing Firebug, adjusting the screen resolution and rearranging the dock icons, this is not required, but a useful workflow improvement. Before we can install xclip, we need to add the 'universe' repository.
+I also want to be able to copy and paste between the shell and Atom. For that, we will install ```xclip```. Like installing Firebug, adjusting the screen resolution and rearranging the dock icons, this is not required, but a useful workflow improvement. Before we can install xclip, we need to add the 'universe' repository. Thanks to user Kangaroo on [Ask Ubuntu for this beauty](http://askubuntu.com/questions/148638/how-do-i-enable-the-universe-repository) on adding the 'universe' repository.
 
     $ sudo add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) universe"
     $ sudo apt-get update
     $ sudo apt-get install xclip
 
-Thanks to user Kangaroo on [Ask Ubuntu for this beauty](http://askubuntu.com/questions/148638/how-do-i-enable-the-universe-repository) on adding the 'universe' repository.
+To paste from ```xclip```, simply use the middle mouse button. My MacBook Pro seemingly lacks a middle mouse button as part of its touchpad. If you are using the  synaptics driver, the 'middle-mouse button' is merely hidden. To paste an X selection, tap the upper right corner of the touchpad. Docs for troubleshooting the touchpad: [Ubuntu Official Documentation - Synaptics Touchpad](https://help.ubuntu.com/community/SynapticsTouchpad)
 
-Docs: The man pages. Run the terminal command ```$ man xclip```.
+Time to Test ```xclip```. We will make a file called testfile and add text to the file for testing our ```xclip``` functionality.
+
+    $ touch testfile
+    $ echo "xclip is awesome sauce" >> testfile
+    $ cat testfile | xclip
+
+Now go "middle click" to paste the output somewhere - perhaps a new file in Atom would suffice. If you get the string "xclip is awesome sauce", then you can delete testfile with the command ```$ rm testfile```.
+
+Docs: The man pages. Run the terminal command ```$ man xclip```. I used the first example from the man pages to test the functionality of xclip.
 
 After a few hours in Ubuntu, I fully understand how OS X not shipping with a package manager feels like a huge oversight from a developer perspective. Previously, it felt like a minor oversight having never used Linux from the command line. The Mac Homebrew slogan "The missing package manager for OS X" now feels fully deserved after using ```apt-get``` which is standard to Debian-based Linux distributions.
 
