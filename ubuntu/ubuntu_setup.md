@@ -7,8 +7,12 @@ Fast Development Setup in Ubuntu to Start Working Now
 
 These are the basic assumptions I am using to direct my workflow and tooling.
 
-The project I want to work on is on Github or another git repository accessible to me and password authentication is acceptable for transmission.
-
++ I have a WiFi network available and the proper credentials to connect to the network.
++ The project I want to work on is on Github or another git repository accessible to me and password authentication is acceptable for transmission.
++ I am comfortable entering commands into the terminal and have a solid understanding of all commands being invoked with sudo.
++ I do not need a GUI for managing my projet with git.
++ My project does not need any compiler or pre-compiler.
++ My project will be able to be served locally by Firefox (ie. there are no server or database requirements for running my project).
 
 ### Adjust screen resolution
 
@@ -38,6 +42,11 @@ Select the WiFi icon in the upper dock. It is signal design that looks like a pi
 
 Select your desired network and authenticate as necessary. Open Firefox and navigate to a website. Keep an eye on the WiFi icon in the upper right corner. It's appearance indicates whether your computer is connected to a WiFi signal and the strength of the signal if connected to a network.
 
+### Install Firebug for a Browser Debugging Tool
+
+Open Firefox and download Firebug.
+Install the extension.
+
 ### Update the package manager
 
 Welcome to your Ubuntu package manager apt-get. It will install, update, configure, and remove programs. First thing is to update it.
@@ -63,7 +72,7 @@ I will use Atom as my text editor because it is free, easy to acquire (courtesy 
 Once I figured out that the shortcut ```ctrl``` + ```tab``` did in fact cycle through programs, albeit differently from OS X, I rearranged my dock to prioritize my dev tools for a faster workflow.
 
 ##### From the Top
-- Search - an immovable object
+- Search - a seemingly immovable object
 - Firefox
 - Atom
 - Terminal
@@ -92,16 +101,10 @@ Run the following command to add the upstream branch.
 
 If you run ```git remote -v``` again, you will now see the upstream branch as well.
 
-### Install Firebug for the best browser debugging tools
-
-
-Open Firefox and download Firebug.
-Install the extension.
-
 ### Open your project in Atom and start working
 
   $ cd ~
-  
+
   $ atom [repo_name]
 
 ### Conclusion
