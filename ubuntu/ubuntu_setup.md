@@ -52,9 +52,7 @@ Passing the ```-s``` size option we can set the resolution to our choice.
 
 I find this more comfortable without feeling 'big' on my 13" Macbook than the recommended resolution of ```2560x1600```.
 
-Docs: The man pages. Run the following command in the shell to access them.
-
-    $ man xrandr
+Docs: The man pages. Run the terminal command ```$ man xrandr```.
 
 ### Connect to WiFi
 
@@ -82,17 +80,23 @@ Link: ```https://github.com/witblacktype/freeCodeCamp_projects/blob/master/ubunt
 
 On your new Ubuntu machine, clicking on any highlighted text in this document will open up the link with Firefox (the default web browser in Ubuntu).
 
+Docs: [Official Ubuntu Documentation - WifiDocs](https://help.ubuntu.com/community/WifiDocs/WiFiHowTo)
+
 ### Install Firebug for a Browser Debugging Tool
 
 Download [Firebug](http://getfirebug.com) from ```http://getfirebug.com/```
 
 Once downloaded, click on the download to install the Firebug extension for Firefox.
 
+Docs: [Official Firebug Documentation](http://getfirebug.com/faq/)
+
 ### Update the Package Manager
 
 Welcome to your Ubuntu package manager ```apt-get```. It will install, update, configure, and remove programs. First thing is to update it.
 
     $ sudo apt-get update
+
+Docs: The man pages. Run the terminal command ```$ man apt-get```.
 
 ### Install Development Tools  
 
@@ -102,15 +106,27 @@ Let's get git first. Say that ten times fast.
 
     $ sudo apt-get install git
 
-I will use Atom as my text editor because it is free, easy to acquire (courtesy of webupd8.org) and 'hackable'. 'Hackable' has to mean it is awesome, right? I had never used it myself before this setup.
+Docs: The man pages. Run the terminal command ```$ man git```.
+
+I will use Atom as my text editor because it is free, easy to acquire (courtesy of webupd8.org) and 'hackable'. 'Hackable' has to mean it is awesome, right? I had never used it myself before this setup. [Documentation for ppa install from WEBUPD8](webupd8.org/2014/05/install-atom-text-editor-in-ubuntu-via-ppa.html).
 
     $ sudo add-apt-repository ppa:webupd8team/atom
     $ sudo apt-get update
     $ sudo apt-get install atom
 
-I also want to be able to copy and paste between the shell and Atom. For that, we will install ```xclip```. Like installing Firebug, adjusting the screen resolution and rearranging the dock icons, this is not required, but a useful workflow improvement.
+The Debian-based Atom distribution is available on [Github from the Atom team](https://github.com/atom/atom) as well, but I didn't realize this when I first set this up.
 
+Docs: [Atom Official Documentation](https://atom.io/docs)
+
+I also want to be able to copy and paste between the shell and Atom. For that, we will install ```xclip```. Like installing Firebug, adjusting the screen resolution and rearranging the dock icons, this is not required, but a useful workflow improvement. Before we can install xclip, we need to add the 'universe' repository.
+
+    $ sudo add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) universe"
+    $ sudo apt-get update
     $ sudo apt-get install xclip
+
+Thanks to user Kangaroo on [Ask Ubuntu for this beauty](http://askubuntu.com/questions/148638/how-do-i-enable-the-universe-repository) on adding the 'universe' repository.
+
+Docs: The man pages. Run the terminal command ```$ man xclip```.
 
 After a few hours in Ubuntu, I fully understand how OS X not shipping with a package manager feels like a huge oversight from a developer perspective. Previously, it felt like a minor oversight having never used Linux from the command line. The Mac Homebrew slogan "The missing package manager for OS X" now feels fully deserved after using ```apt-get``` which is standard to Debian-based Linux distributions.
 
@@ -131,6 +147,8 @@ To edit the order of programs in the dock, click and hold on an item in the dock
 - system settings
 - devices
 
+Docs: I was unable to find anything resembling 'documentation'. I just figured this out, but I'm sure some YouTube pros have guides to "Set up Ubuntu Unity Desktop", provided said pros don't hate the Unity desktop.
+
 ### Clone a Project in Progress
 
 Let's keep it simple. This project will live in your home.
@@ -141,6 +159,7 @@ Let's keep it simple. This project will live in your home.
 
 If this stuff is easy for you, put it wherever you like but note the instructions following may be slightly different for you as a result.
 
+Docs: The man pages. Run the terminal command ```$ man git clone```.
 
 ### Configure the Upstream Branch
 
@@ -157,6 +176,8 @@ Run the following command to add the upstream branch.
 
 If you run ```git remote -v``` again, you will now see the upstream branch as well.
 
+Docs: The man pages. Run the terminal command ```$ man git remote```.
+
 ### You Should Probably Create Your Own Branch
 
 I imagine that if Linus Torvalds were here, he would point out how much our code sucks. He would also show us how we could work with our sucky code in a little corner and not disturb the more gifted among us. Create your own branch! Now your sucky code can live in it's own sucky world like my code. If your code doesn't suck, other people may care.
@@ -166,6 +187,8 @@ I imagine that if Linus Torvalds were here, he would point out how much our code
 Now no one will mess with your branch. If your code is actually good, you can just create a new branch called something more dignified. However, you would already know how to do that and this guide might be a total waste of your time, but I digress. If you suck, embrace the suck. Before long, you will suck less.
 
 For those with branch allergens, if you are the sole contributer to a project, you can just commit on master like a boss. That's how this repo got built just for speed of development's sake.
+
+Docs: The man pages. Run the terminal command ```$ man git checkout```.
 
 ### Open Project in Atom and Get to Work
 
@@ -177,6 +200,8 @@ Now that you are on your own branch or plan to commit on master like it aint no 
 ## Off to Work
 
 Now that your new Ubuntu machine is setup for work, I will cover how I leverage this setup in my workflow.
+
+Docs: [Ubuntu Official Documentation - Ubuntu Desktop Guide](https://help.ubuntu.com/stable/ubuntu-help/)
 
 ### The Workflow
 
