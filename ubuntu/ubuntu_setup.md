@@ -8,19 +8,28 @@ Fast Development Setup in Ubuntu to Start Working Now
 These are the basic assumptions I am using to direct my workflow and tooling.
 
 + I have a WiFi network available and the proper credentials to connect to the network.
-+ The project I want to work on is on Github or another git repository accessible to me and password authentication is acceptable for transmission.
++ The project I want to work on is on Github and password authentication is acceptable for transmission.
 + I am comfortable entering commands into the terminal and have a solid understanding of all commands being invoked with sudo.
 + I do not need a GUI for managing my projet with git.
 + My project does not need any compiler or pre-compiler.
 + My project will be able to be served locally by Firefox (ie. there are no server or database requirements for running my project).
 
+Personally, this is my first time working in a Linux distro when I have not been ignorant to a Unix-like environment. I developed my Unix-like skills in the Mac Terminal App using Bash. My Linux experience is close to none in general but my Unix-like experience is beyond that of a beginner.
+
 ### Adjust screen resolution
 
 I found the default screen resolution uncomfortably small. Check the current resolution and available resolution settings.  The command ```xrandr``` with no arguments will list the screen resolutions available and information about your screen settings.
 
-  $ xrander
+  $ xrandr
 
 The asterisk ```*``` marks the current resolution. The marks ```+``` the recommended resolution(s).
+
+
+#### My Solution
+
+	^-?\d+((\.|,|e)?(\d+)?){1,}$
+
+
 
 Passing the size ```-s``` option we can set the resolution to our choice.
 
