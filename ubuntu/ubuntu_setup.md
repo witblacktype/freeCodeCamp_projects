@@ -211,7 +211,7 @@ This workflow benefits by not needing any compiler, server or database to serve 
 
 ##### Use Case # 2
 
-*Develop a markdown document locally and push the document to github for online viewing.*
+*Develop a markdown document locally and push the document to Github for online viewing.*
 
 After acclimating to my new environment and armed with notes from my setup, I wanted to create a guide on Github for my own reference in the future and for the possible benefit of others.
 
@@ -236,4 +236,4 @@ Use ```super``` + ```tab``` to switch between programs in your workflow. While h
 
 For a new user to Ubuntu with a fresh install, it does not take long to set up the minimum tools to work collaboratively on a project managed under git, and this setup is mindful of a usable workflow.
 
-This workflow could be improved significantly with a couple more steps. The next step would be setup SSH to handle Github authentication. Then, I would remap the ```caps lock``` key to be another ```ctrl``` key. That's my happy-place for a basic workflow setup.
+This workflow could be improved significantly with a couple more steps. The next step would be setup SSH to handle Github authentication. Then, I would remap the ```caps lock``` key to be another ```ctrl``` key. That's my happy-place for a basic workflow setup and what I intend to do in a persistent Ubuntu environment.
