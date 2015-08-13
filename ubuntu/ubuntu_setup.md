@@ -34,13 +34,13 @@ When following instructions you find online, you should be skeptical of their va
 
 ### This Guide's Value to You
 
-I wrote this guide after 48 hours of working in the non-persistant environment I had unfortunately created. This quick setup has allowed me to continue with my work and write this guide without a reliable local save function. This setup is fast and focused on getting back to work in your new Ubuntu Linux OS.
+This setup is fast and focused on getting back to work in your new Ubuntu Linux OS. I wrote this guide after 48 hours of working in the non-persistant environment I had unfortunately created. This quick setup has allowed me to continue with my work and write this guide without a reliable local save function. Whether you are booting into Ubuntu for the first time or evaluating the trial version, this guide is intended to get you into a development workflow on Ubuntu quickly.
 
 ## <a id="11-steps"></a>11 Steps to Start Working on a Github hosted project from a clean install of Ubuntu
 
 ### Adjust screen resolution
 
-I found the default screen resolution uncomfortably small. Check the current resolution and available resolution settings.  The command ```xrandr``` with no arguments will list the screen resolutions available and information about your screen settings.
+I found the default screen resolution uncomfortably small. Check the current resolution and available resolution settings. The command ```xrandr``` with no arguments will list the screen resolutions available and information about your screen settings.
 
     $ xrandr
 
@@ -74,28 +74,29 @@ If you connected to the Firebug homepage, you have an internet connection throug
 
 If you did not connect to the Firebug page with the available link to download, try to navigate to a site like [Google](google.com) ```google.com``` or [Mozilla](mozilla.org) ```mozilla.org```. If you could not access either of these, select the WiFi icon in the upper right corner to inspect the available networks and begin troubleshooting. This is not a troubleshooting guide and I would recommend using the [RSAP](http://www.freecodecamp.com/field-guide/how-do-i-get-help-when-i-get-stuck) method to the best of your ability to solve your connection problem.
 
-Link to RSAP method to problem solving: http://www.freecodecamp.com/field-guide/how-do-i-get-help-when-i-get-stuck
+Link to RSAP method for problem solving: ```http://www.freecodecamp.com/field-guide/how-do-i-get-help-when-i-get-stuck```
 
 Text-only links have been provided in addition to the links to this point for you to easily read the url's considering that you might be reading this from a device other than the one running Ubuntu that you are setting up. Once your internet connection is established, open this guide [Ubuntu Setup](https://github.com/witblacktype/freeCodeCamp_projects/blob/master/ubuntu/ubuntu_setup.md) in Firefox on your Ubuntu machine
 
-Link: https://github.com/witblacktype/freeCodeCamp_projects/blob/master/ubuntu/ubuntu_setup.md.
+Link: ```https://github.com/witblacktype/freeCodeCamp_projects/blob/master/ubuntu/ubuntu_setup.md```.
 
-On your new Ubuntu machine, clicking on any highlighted text in this document will open up the link with Firefox.
+On your new Ubuntu machine, clicking on any highlighted text in this document will open up the link with Firefox (the default web browser in Ubuntu).
 
 ### Install Firebug for a Browser Debugging Tool
 
-Open Firefox and download Firebug.
-Install the extension.
+Download Firebug from ```http://getfirebug.com/```
+
+Once downloaded, click on the download to install the Firebug extension for Firefox.
 
 ### Update the package manager
 
-Welcome to your Ubuntu package manager apt-get. It will install, update, configure, and remove programs. First thing is to update it.
+Welcome to your Ubuntu package manager ```apt-get```. It will install, update, configure, and remove programs. First thing is to update it.
 
     $ sudo apt-get update
 
 ### Install Development Tools  
 
-Now we can install the programs we need using apt-get. My two primary tools will be git and a text editor. Let's get git first. Say that ten times fast.
+Now we can install the programs we need using ```apt-get```. My two primary tools will be git and a text editor. Let's get git first. Say that ten times fast.
 
     $ sudo apt-get install git
 
@@ -104,6 +105,12 @@ I will use Atom as my text editor because it is free, easy to acquire (courtesy 
     $ sudo add-apt-repository ppa:webupd8team/atom
     $ sudo apt-get update
     $ sudo apt-get install atom
+
+I also want to be able to copy and paste between the shell and Atom. For that, we will install ```xclip```. Like installing Firebug adjusting the screen resolution and rearranging the dock icons, this is not required, but a useful workflow improvement.
+
+    $ sudo apt-get install xclip
+
+After less than a day in Ubuntu, I now fully understand how OS X not shipping with a package manager feels like a huge oversight from a developer perspective. The Mac Homebrew slogan "The missing package manager for OS X" now feels fully deserved after using ```apt-get``` which is standard to Debian-based Linux distributions.
 
 ### Rearrange the dock
 
@@ -143,15 +150,17 @@ If you run ```git remote -v``` again, you will now see the upstream branch as we
 
 ### It is good practice to create your own branch
 
-I imagine that if Linus Torvalds were here, he would point out how much our code sucks. He would also show us how we could work with our sucky code in a little corner and not disturb the more gifted among us. Create your own branch. Now your sucky code can live in it's own sucky world like my code. If your code doesn't suck, other people may care.
+I imagine that if Linus Torvalds were here, he would point out how much our code sucks. He would also show us how we could work with our sucky code in a little corner and not disturb the more gifted among us. Create your own branch! Now your sucky code can live in it's own sucky world like my code. If your code doesn't suck, other people may care.
 
     $ git checkout -b iSuck
 
-Now no one will mess with your branch. If your code is actually good, you can just create a new branch called something more dignified. However, you would already know how to do that and this guide might be a total waste of your time, but I digress.
+Now no one will mess with your branch. If your code is actually good, you can just create a new branch called something more dignified. However, you would already know how to do that and this guide might be a total waste of your time, but I digress. If you suck, embrace the suck. Before long, you will suck much less.
 
-If you suck, embrace the suck. Before long, you will suck much less.
+For those with branch allergens, if you are the sole contributer to a project, you can just commit on master like a boss. That's how this repo got built just for speed of development's sake.
 
 ### Open your project in Atom and start working
+
+Now that you are on your own branch or plan to commit on master like it aint no thang, open your project and begin work.
 
     $ cd ~
     $ atom [repo_name]
