@@ -1,7 +1,7 @@
 Fast Development Setup in Ubuntu to Start Working Now
 =====================================================
 
-If you found this from a search, the following few sections describe the reasoning behind why this was valuable to me and how it might be valuable to you. I hope it helps. Otherwise, skip this silliness and get to the setup [10 Steps](#11-steps)
+If you found this from a search, the following few sections describe the reasoning behind why this was valuable to me and how it might be valuable to you. I hope it helps. Otherwise, skip this silliness and get to the setup #####[10 Steps](#11-steps)
 
 ### Starting Point
 
@@ -22,7 +22,7 @@ I have only ever used Ubuntu before to download and use an IDE for coding C++ in
 
 I had just created an Ubuntu usb that was bootable on a Mac. In attempting to load Ubuntu from the usb, I deleted everything off of my Mac and installed the usb version of Ubuntu on my Mac. All is not lost: I have time machine backups on another device and most of my recent work has all been pushed to Github. I cannot (or do not know how to) run Ubuntu from the usb and the operating system on my computer does not work. Until I can reinstall OS X, the only way I can manage to run an operating system on my Mac is the trial version of Ubuntu.
 
-    Hello non-persistant World
+    Hello Non-Persistant World
 
 When I showed off my workflow for a non-persistant OS, my design partner told me it was very 'cyber punk'. I took that as a compliment.
 
@@ -108,7 +108,7 @@ Let's get git first. Say that ten times fast.
 
 Docs: The man pages. Run the terminal command ```$ man git```.
 
-I will use Atom as my text editor because it is free, easy to acquire (courtesy of webupd8.org) and 'hackable'. 'Hackable' has to mean it is awesome, right? I had never used it myself before this setup. [Documentation for ppa install from WEBUPD8](webupd8.org/2014/05/install-atom-text-editor-in-ubuntu-via-ppa.html).
+I will use Atom as my text editor because it is free, easy to acquire (courtesy of webupd8.org) and 'hackable' - that must mean it's awesome, right? I had never used it myself before this setup. [Documentation for ppa install from WEBUPD8](webupd8.org/2014/05/install-atom-text-editor-in-ubuntu-via-ppa.html).
 
     $ sudo add-apt-repository ppa:webupd8team/atom
     $ sudo apt-get update
@@ -118,7 +118,7 @@ The Debian-based Atom distribution is available on [Github from the Atom team](h
 
 Docs: [Atom Official Documentation](https://atom.io/docs)
 
-I also want to be able to copy and paste between the shell and Atom. For that, we will install ```xclip```. Like installing Firebug, adjusting the screen resolution and rearranging the dock icons, this is not required, but a useful workflow improvement. Before we can install xclip, we need to add the 'universe' repository. Thanks to user Kangaroo on [Ask Ubuntu for this beauty](http://askubuntu.com/questions/148638/how-do-i-enable-the-universe-repository) on adding the 'universe' repository.
+I also want to be able to copy and paste between the shell and Atom. For that, we will install ```xclip```. Like installing Firebug, adjusting the screen resolution and rearranging the dock icons, this is not required, but a useful workflow improvement. Before we can install xclip, we need to add the 'universe' repository. Thanks to user Kangaroo on [Ask Ubuntu for this beauty](http://askubuntu.com/questions/148638/how-do-i-enable-the-universe-repository) on adding this repository.
 
     $ sudo add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) universe"
     $ sudo apt-get update
@@ -132,7 +132,7 @@ Time to Test ```xclip```. We will make a file called testfile and add text to th
     $ echo "xclip is awesome sauce" >> testfile
     $ cat testfile | xclip
 
-Now go "middle click" to paste the output somewhere - perhaps a new file in Atom would suffice. If you get the string "xclip is awesome sauce", then you can delete testfile with the command ```$ rm testfile```.
+Now go 'middle click' to paste the output somewhere - perhaps a new Atom file. If you get the string "xclip is awesome sauce", then you can delete testfile with the command ```$ rm testfile```.
 
 Docs: The man pages. Run the terminal command ```$ man xclip```. I used the first example from the man pages to test the functionality of xclip.
 
@@ -142,7 +142,7 @@ After a few hours in Ubuntu, I fully understand how OS X not shipping with a pac
 
 Once I figured out that the shortcut ```cmd``` + ```tab``` did, in fact, cycle through programs, albeit differently from OS X, I rearranged my dock to prioritize my dev tools for a faster workflow. The Mac ```cmd``` key and the Windows ```window``` key are known in Linux as the ```super``` key. The shortcut ```super``` + ```tab``` will cycle through programs in the dock - to keep your fingers on the keyboard, where they rock.
 
-To edit the order of programs in the dock, click and hold on an item in the dock to enable drag-and-drop and move it to the desired dock position. I set up my dock based on my priorities being a browser, text editor, shell and files.
+To edit the order of programs in the dock, click and hold on an icon to enable drag-and-drop and move it to the desired dock position. I set up my dock based on my priorities being a browser, text editor, shell and files.
 
 ##### From the Top
 - Search - a seemingly immovable object
@@ -152,10 +152,10 @@ To edit the order of programs in the dock, click and hold on an item in the dock
 - Files
 - whatever else down here doesn't matter
 - more stuff that doesn't matter
-- system settings
-- devices
+- System settings
+- Devices
 
-Docs: I was unable to find anything resembling 'documentation'. I just figured this out, but you could check these seemingly-relevant docs: [Ubuntu Official Documentation - Ubuntu Desktop Guide](https://help.ubuntu.com/stable/ubuntu-help/).
+Docs: I was unable to find the 'Official Documentation' for this. I just figured this out, but you could check these seemingly-relevant docs: [Ubuntu Official Documentation - Ubuntu Desktop Guide](https://help.ubuntu.com/stable/ubuntu-help/).
 
 ### Clone a Project in Progress
 
@@ -215,7 +215,7 @@ This guide was developed on a trial version of Ubuntu using a workflow resulting
 The two main tasks that comprise each workflow:
 
 - Develop locally in Atom and use Firefox to inspect the document.
-- Develop locally under git and push changes to Github.
+- Version control local development under git and push changes to Github.
 
 ##### Use Case # 1
 
