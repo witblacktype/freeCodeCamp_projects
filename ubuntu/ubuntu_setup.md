@@ -106,7 +106,7 @@ I will use Atom as my text editor because it is free, easy to acquire (courtesy 
     $ sudo apt-get update
     $ sudo apt-get install atom
 
-I also want to be able to copy and paste between the shell and Atom. For that, we will install ```xclip```. Like installing Firebug adjusting the screen resolution and rearranging the dock icons, this is not required, but a useful workflow improvement.
+I also want to be able to copy and paste between the shell and Atom. For that, we will install ```xclip```. Like installing Firebug, adjusting the screen resolution and rearranging the dock icons, this is not required, but a useful workflow improvement.
 
     $ sudo apt-get install xclip
 
@@ -114,7 +114,9 @@ After less than a day in Ubuntu, I now fully understand how OS X not shipping wi
 
 ### Rearrange the dock
 
-Once I figured out that the shortcut ```ctrl``` + ```tab``` did, in fact, cycle through programs, albeit differently from OS X, I rearranged my dock to prioritize my dev tools for a faster workflow. Click and hold on an item in the dock to enable drag-and-drop it in the desired dock position.
+Once I figured out that the shortcut ```cmd``` + ```tab``` did, in fact, cycle through programs, albeit differently from OS X, I rearranged my dock to prioritize my dev tools for a faster workflow. The Mac ```cmd``` key and the Windows ```window``` key are known in Linux as the ```super``` key. The shortcut ```super``` + ```tab``` will cycle through programs in the dock to keep your fingers on the keyboard where they rock.
+
+To edit the order of programs in the dock, click and hold on an item in the dock to enable drag-and-drop it in the desired dock position. Drag and drop the icon where you would like it in the dock. I set up my dock based on my priorities.
 
 ##### From the Top
 - Search - a seemingly immovable object
@@ -165,6 +167,58 @@ Now that you are on your own branch or plan to commit on master like it aint no 
     $ cd ~
     $ atom [repo_name]
 
+## Off to Work
+
+Now that your new Ubuntu machine is setup for work, I will cover how I leverage this setup in my workflow.
+
+### The Workflow
+
+This guide was developed on a trial version of Ubuntu using a workflow resulting from this setup. Below are the two workflows I have used thus far from this setup.
+
+The two main tasks that comprise each workflow:
+
+- Develop locally in Atom and use Firefox to inspect the document.
+- Develop locally under git and push changes to Github.
+
+##### Use Case # 1
+
+Develop a javascript algorithm locally and save work to a Github repo.
+
+Writing these algorithms is my current project in progress. This setup exists so I can get on with this task.
+
+- Open project in Atom.
+- Open the appropriate index.html file in Firefox.
+- Open the Firebug debugging console.
+- Make changes to the project in Atom.
+- Save changes in Atom ```ctrl``` + ```s```.
+- Reload index.html in Firefox ```ctrl``` + ```r```.
+- Debug your javascript using the Firebug debugging console.
+- Commit changes to your working branch.
+- Push your branch to the remote repo on Github.
+
+This workflow benefits by not needing any compiler, server or database to serve the code.
+
+##### Use Case # 2
+
+Develop a markdown document locally and push the document to github for online viewing.
+
+After acclimating to my new environment and armed with notes from my setup, I wanted to create a guide on Github for my own reference in the future and for the possible benefit of others.
+
+- Open project in Atom.
+- In Firefox, navigate to the web address (on Github) for the markdown file you are editing.
+- Make changes to the project in Atom.
+- Save changes in Atom ```ctrl``` + ```s```.
+- Commit changes to your working branch.
+- Push your branch to the remote repo on Github.
+- Reload the markdown file on Github in Firefox ```ctrl``` + ```r```.
+- Inspect the markdown formatting for expected output.
+
+Since the markdown needs to be compiled to html, we will just let Github handle that for us. By committing our changes and pushing them to Gitub, we can inspect the html displayed compiled from our markdown file.
+
+##### Bonus Points to Turbocharge Your Workflow
+
+Use ```super``` + ```tab``` to switch between programs in your dock. While holding down on ```super```, each press of the ```tab``` key will cycle to the next program in the dock.
+
 ### Conclusion
 
-On a fresh install of Ubuntu it does not take long to set up the minimum tools to work collaboratively on a project managed under git.
+On a fresh install of Ubuntu it does not take long to set up the minimum tools to work collaboratively on a project managed under git, and this setup is mindful of a usable workflow.
