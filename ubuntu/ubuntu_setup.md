@@ -9,14 +9,14 @@ These are the basic assumptions I am using to direct my workflow and tooling.
 
 + I have a WiFi network available and the proper credentials to connect to the network.
 + The project I want to work on is on Github and password authentication is acceptable for transmission.
-+ I am comfortable entering commands into the terminal and have a solid understanding of all commands being invoked with sudo.
-+ I do not need a GUI for managing my project with git.
++ I am comfortable entering commands into the terminal and have a solid understanding of all commands being invoked with ```sudo```.
++ The terminal is a suitable environment for managing my project with git.
 + My project does not need any compiler or pre-compiler.
 + My project will be able to be served locally by Firefox (ie. there are no server or database requirements for running my project).
 
 ### My Relevant Background
 
-I have only ever used Ubuntu before to download and use an IDE for coding C++ in a math class. My experience in Ubuntu or any Linux distribution is close to zero. I have never used any Linux distribution since acquiring any skills on a command line. I acquired my basic Unix-like skills in OS X on the command line knowing the transferability of the skills and the accessibility of tools like bash and git across various Unix-like operating systems.
+I have only ever used Ubuntu before to download and use an IDE for coding C++ in a math class. My experience in Ubuntu is close to zero and minimal time on a Linux server is my only other direct experience to this operating system. I have never used any Linux desktop distribution since acquiring any skills on a command line. I acquired my basic Unix-like skills in OS X on the command line and working with my Linux web server knowing the transferability of the skills and the accessibility of tools like bash and git across various Unix-like operating systems.
 
 ### My Motivation
 
@@ -26,7 +26,7 @@ I had just created an Ubuntu usb that was bootable on a Mac. In attempting to lo
 
 When I showed off my workflow for a non-persistant OS, my design partner told me it was very 'cyber punk'. I took that as a compliment.
 
-I can just keep working with the project I have been hosting on Github if I have the minimum tools necessary and can push my changes to Github - since removing the usb or powering down my computer will destroy any changes made to the trial operating system. The objective is to streamline acquiring the base development tools for a Github-hosted project. I also included a few tweaks that I feel have a major impact in optimizing my workflow based on my current OS X dev workflow.
+I can just keep working with the project I have been hosting on Github if I have the minimum tools necessary and can push my changes to Github - since removing the usb or powering down my computer will destroy any changes made to the trial operating system. My objective was to streamline acquiring the base development tools for a Github-hosted project. I also included a few tweaks that I feel have a major impact in optimizing my workflow based on my current OS X dev workflow.
 
 ### For the Security Conscious Noob
 
@@ -34,7 +34,7 @@ When following instructions you find online, you should be skeptical of their va
 
 ### This Guide's Value to You
 
-This setup is fast and focused on getting back to work in your new Ubuntu Linux OS. I wrote this guide after 48 hours of working in the non-persistant environment I had unfortunately created. This quick setup has allowed me to continue with my work and write this guide without a reliable local save function. Whether you are booting into Ubuntu for the first time or evaluating the trial version, this guide is intended to get you into a development workflow on Ubuntu quickly.
+This setup is fast and focused on getting back to work in a new Ubuntu Linux OS. I wrote this guide after 48 hours of working in the non-persistant environment I had unfortunately created. This quick setup has allowed me to continue with my work and write this guide without a reliable local save function. Whether you are booting into Ubuntu for the first time or evaluating the trial version, this guide is intended to get you into a development workflow on Ubuntu quickly.
 
 ## <a id="11-steps"></a>11 Steps to Start Working on a Github hosted project from a clean install of Ubuntu
 
@@ -84,7 +84,7 @@ On your new Ubuntu machine, clicking on any highlighted text in this document wi
 
 ### Install Firebug for a Browser Debugging Tool
 
-Download Firebug from ```http://getfirebug.com/```
+Download [Firebug](http://getfirebug.com) from ```http://getfirebug.com/```
 
 Once downloaded, click on the download to install the Firebug extension for Firefox.
 
@@ -96,7 +96,9 @@ Welcome to your Ubuntu package manager ```apt-get```. It will install, update, c
 
 ### Install Development Tools  
 
-Now we can install the programs we need using ```apt-get```. My two primary tools will be git and a text editor. Let's get git first. Say that ten times fast.
+Now we can install the programs we need using ```apt-get```. My two primary tools will be git and a text editor with a way to copy and paste between them.
+
+Let's get git first. Say that ten times fast.
 
     $ sudo apt-get install git
 
@@ -110,13 +112,13 @@ I also want to be able to copy and paste between the shell and Atom. For that, w
 
     $ sudo apt-get install xclip
 
-After less than a day in Ubuntu, I now fully understand how OS X not shipping with a package manager feels like a huge oversight from a developer perspective. The Mac Homebrew slogan "The missing package manager for OS X" now feels fully deserved after using ```apt-get``` which is standard to Debian-based Linux distributions.
+After a few hours in Ubuntu, I fully understand how OS X not shipping with a package manager feels like a huge oversight from a developer perspective. Previously, it felt like a minor oversight having never used Linux from the command line. The Mac Homebrew slogan "The missing package manager for OS X" now feels fully deserved after using ```apt-get``` which is standard to Debian-based Linux distributions.
 
 ### Rearrange the dock
 
-Once I figured out that the shortcut ```cmd``` + ```tab``` did, in fact, cycle through programs, albeit differently from OS X, I rearranged my dock to prioritize my dev tools for a faster workflow. The Mac ```cmd``` key and the Windows ```window``` key are known in Linux as the ```super``` key. The shortcut ```super``` + ```tab``` will cycle through programs in the dock to keep your fingers on the keyboard where they rock.
+Once I figured out that the shortcut ```cmd``` + ```tab``` did, in fact, cycle through programs, albeit differently from OS X, I rearranged my dock to prioritize my dev tools for a faster workflow. The Mac ```cmd``` key and the Windows ```window``` key are known in Linux as the ```super``` key. The shortcut ```super``` + ```tab``` will cycle through programs in the dock - to keep your fingers on the keyboard, where they rock.
 
-To edit the order of programs in the dock, click and hold on an item in the dock to enable drag-and-drop it in the desired dock position. Drag and drop the icon where you would like it in the dock. I set up my dock based on my priorities.
+To edit the order of programs in the dock, click and hold on an item in the dock to enable drag-and-drop and move it to the desired dock position. I set up my dock based on my priorities being a browser, text editor, shell and files.
 
 ##### From the Top
 - Search - a seemingly immovable object
@@ -138,8 +140,9 @@ Let's keep it simple. This project will live in your home.
 
 ### Configure the upstream branch
 
-First, run the following command to see the details of the remote repositories.
+First, run the following command to see the details of the remote repositories. Move to the git project directory and list the remote repositories. You may run a ```git status``` at any time while working with git.
 
+    $ cd [repo_name]
     $ git remote -v
 
 The verbose ```-v``` option displays the details in addition to the names of the remotes.
@@ -173,7 +176,7 @@ Now that your new Ubuntu machine is setup for work, I will cover how I leverage 
 
 ### The Workflow
 
-This guide was developed on a trial version of Ubuntu using a workflow resulting from this setup. Below are the two workflows I have used thus far from this setup.
+This guide was developed on a trial version of Ubuntu using a workflow resulting from this same setup. Below are the two workflows I have used thus far from this setup.
 
 The two main tasks that comprise each workflow:
 
@@ -186,17 +189,21 @@ Develop a javascript algorithm locally and save work to a Github repo.
 
 Writing these algorithms is my current project in progress. This setup exists so I can get on with this task.
 
-- Open project in Atom.
-- Open the appropriate index.html file in Firefox.
-- Open the Firebug debugging console.
-- Make changes to the project in Atom.
+- Open project in Atom with ```ctrl``` + ```o``` or from the shell ```$ atom [directory_name]```.
+- Open the appropriate index.html file in Firefox.<br>
+  There are many ways to do this quickly.
+  1. From Atom, right-click on the file in Atom project browser. Then select the file from the Ubuntu file browser and press ```ctrl``` + ```o``` to open in the default browser (Firefox).
+  2. From Firefox, press ```ctrl``` + ```o``` to open a file. Find and select it from the Ubuntu file browser and press ```return``` to open it with Firefox.
+  3. From Terminal, ```$ firefox ~/[repo_name]/[path]/[to]/[file]/index.html```. Fill in the appropriate path and done.
+- Open the Firebug debugging console ```f12```.
+- Make your changes to the project in Atom. DO REAL WORK HERE.
 - Save changes in Atom ```ctrl``` + ```s```.
 - Reload index.html in Firefox ```ctrl``` + ```r```.
-- Debug your javascript using the Firebug debugging console.
-- Commit changes to your working branch.
-- Push your branch to the remote repo on Github.
+- Debug your javascript using the Firebug debugging console. THE OTHER REAL WORK IS DOWN HERE.
+- Commit changes to your working branch ```$ git commit -am "Edit File X"```.
+- Push your branch to the remote repo on Github ```git push```. Use password authentication fro Github.
 
-This workflow benefits by not needing any compiler, server or database to serve the code.
+This workflow benefits by not needing any compiler, server or database to serve the code. In practice, making changes and debugging the changes is the only real work being done. The rest is setting up the project, tools and version control.
 
 ##### Use Case # 2
 
@@ -205,20 +212,22 @@ Develop a markdown document locally and push the document to github for online v
 After acclimating to my new environment and armed with notes from my setup, I wanted to create a guide on Github for my own reference in the future and for the possible benefit of others.
 
 - Open project in Atom.
-- In Firefox, navigate to the web address (on Github) for the markdown file you are editing.
-- Make changes to the project in Atom.
+- In Firefox, navigate to the web address (on Github) for the markdown file you are editing. For example, navigate to  ```http://github/[username]/[repo_name]/README.md``` to view the README file for the repository.
+- Make changes to the project in Atom. DO REAL WORK HERE.
 - Save changes in Atom ```ctrl``` + ```s```.
-- Commit changes to your working branch.
-- Push your branch to the remote repo on Github.
+- Commit changes to your working branch ```git commit -am "Edit File X"```.
+- Push your branch to the remote repo on Github ```git push```. Use password authentication.
 - Reload the markdown file on Github in Firefox ```ctrl``` + ```r```.
-- Inspect the markdown formatting for expected output.
+- Inspect the markdown formatting for expected output. THE OTHER REAL WORK IS HERE.
 
-Since the markdown needs to be compiled to html, we will just let Github handle that for us. By committing our changes and pushing them to Gitub, we can inspect the html displayed compiled from our markdown file.
+Since the markdown needs to be compiled to html, we will just let Github handle that for us. By committing our changes and pushing them to Gitub, we can inspect the html display of our markdown file. Like the first workflow, the only real work being done here is making changes and inspecting the output of those changes, in this case, html.
 
 ##### Bonus Points to Turbocharge Your Workflow
 
-Use ```super``` + ```tab``` to switch between programs in your dock. While holding down on ```super```, each press of the ```tab``` key will cycle to the next program in the dock.
+Use ```super``` + ```tab``` to switch between programs in your workflow. While holding down on ```super```, each press of the ```tab``` key will cycle to the next program in the dock. ```Shift``` + ```tab``` will cycle through the programs in reverse order.
 
 ### Conclusion
 
-On a fresh install of Ubuntu it does not take long to set up the minimum tools to work collaboratively on a project managed under git, and this setup is mindful of a usable workflow.
+For a new user to Ubuntu with a fresh install, it does not take long to set up the minimum tools to work collaboratively on a project managed under git, and this setup is mindful of a usable workflow.
+
+This workflow could be improved significantly with a couple more steps. The next steps I would take would be to setup SSH to handle my Github authentication. Then, I would remap the ```caps lock``` key to be another ```ctrl``` key. That's my happy-place for a basic workflow setup.
