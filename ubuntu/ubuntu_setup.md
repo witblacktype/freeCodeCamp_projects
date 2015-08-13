@@ -1,8 +1,8 @@
 Fast Development Setup in Ubuntu to Start Working Now
 =====================================================
 
-11 Steps to Start Working on a Github hosted project from a clean install of Ubuntu
------------------------------------------------------------------------------------
+If you found this from a search, the following few sections describe the reasoning behind why this was valuable to me and how it might be valuable to you. I hope it helps. Skip this silliness and get to the setup [11 Steps](#11-steps)
+
 ### Starting Point
 
 These are the basic assumptions I am using to direct my workflow and tooling.
@@ -14,7 +14,15 @@ These are the basic assumptions I am using to direct my workflow and tooling.
 + My project does not need any compiler or pre-compiler.
 + My project will be able to be served locally by Firefox (ie. there are no server or database requirements for running my project).
 
-Personally, this is my first time working in a Linux distro when I have not been ignorant to a Unix-like environment. I developed my Unix-like skills in the Mac Terminal App using Bash. My Linux experience is close to none in general but my Unix-like experience is beyond that of a beginner.
+### My Relevant Background
+
+I have used Ubuntu before to download and use an IDE for coding C++ in a math class. My experience in Ubuntu or any Linux distribution is close to zero. I have never used any Linux distribution since acquiring any skills on a command line. I acquired my basic Unix-like skills in OS X on the command line knowing the transferability of the skills and the accessibility of tools like the bash shell and git across various Unix-like operating systems.
+
+### My Motivation
+
+I
+
+## <a id="11-steps"></a>11 Steps to Start Working on a Github hosted project from a clean install of Ubuntu
 
 ### Adjust screen resolution
 
@@ -42,7 +50,15 @@ Open the system settings from the dock. It's the gear and wrench icon. Select So
 
 Select the WiFi icon in the upper dock. It is signal design that looks like a piece of pie. You should see the visible WiFi networks in range. If you do not, I found that toggling the selected driver off and back on solved the trick on more than one occasion.
 
-Select your desired network and authenticate as necessary. Open Firefox and navigate to a website. Keep an eye on the WiFi icon in the upper right corner. It's appearance indicates whether your computer is connected to a WiFi signal and the strength of the signal if connected to a network.
+Select your desired network and authenticate as necessary. Open Firefox and navigate to a website.
+
+Navigate to [Firebug](http://getfirebug.com/) ```http://getfirebug.com/``` in Firefox.
+
+Keep an eye on the WiFi icon in the upper right corner. It's appearance indicates whether your computer is connected to a WiFi signal and the strength of the signal if connected to a network.
+
+If you connected to the Firebug homepage, you have an internet connection through your WiFi configuration and the Firebug page is not experiencing a service interruption. You are ready to move on.
+
+If you did not connect to the Firebug page with the available link to download, try to navigate to a site like [Google](google.com) ```google.com``` or [Mozilla](mozilla.org) ```mozilla.org```. If you could not access either of these, select the WiFi icon in the upper right corner to inspect the available networks and begin troubleshooting. This is not a troubleshooting guide and I would recommend using the RSAP method to the best of your ability to solve your connection problem.
 
 ### Install Firebug for a Browser Debugging Tool
 
@@ -64,14 +80,12 @@ Now we can install the programs we need using apt-get. My two primary tools will
 I will use Atom as my text editor because it is free, easy to acquire (courtesy of webupd8.org) and 'hackable'. 'Hackable' has to mean it is awesome, right? I had never used it myself before this setup.
 
     $ sudo add-apt-repository ppa:webupd8team/atom
-
     $ sudo apt-get update
-
     $ sudo apt-get install atom
 
 ### Rearrange the dock
 
-Once I figured out that the shortcut ```ctrl``` + ```tab``` did in fact cycle through programs, albeit differently from OS X, I rearranged my dock to prioritize my dev tools for a faster workflow.
+Once I figured out that the shortcut ```ctrl``` + ```tab``` did, in fact, cycle through programs, albeit differently from OS X, I rearranged my dock to prioritize my dev tools for a faster workflow. Click and hold on an item in the dock to enable drag-and-drop it in the desired dock position.
 
 ##### From the Top
 - Search - a seemingly immovable object
@@ -80,13 +94,15 @@ Once I figured out that the shortcut ```ctrl``` + ```tab``` did in fact cycle th
 - Terminal
 - Files
 - whatever else down here doesn't matter
+- more stuff that doesn't matter
+- system settings
+- devices
 
 ### Clone a Project to work on
 
 Let's keep it simple. This project will live in your home.
 
     $ cd ~
-
     $ git clone https://github.com/[github_username]/[repo_name].git
 
 ### Configure the upstream branch
@@ -103,14 +119,19 @@ Run the following command to add the upstream branch.
 
 If you run ```git remote -v``` again, you will now see the upstream branch as well.
 
-### It is good practice to
+### It is good practice to create your own branch
 
-    $ git
+I imagine that if Linus Torvalds were here, he would point out how much our code sucks. He would also show us how we could work with our sucky code in a little corner and not disturb the more gifted among us. Create your own branch. Now your sucky code can live in it's own sucky world like my code. If your code doesn't suck, other people may care.
+
+    $ git checkout -b iSuck
+
+Now no one will mess with your branch. If your code is actually good, you can just create a new branch called something more dignified. However, you would already know how to do that and this guide might be a total waste of your time, but I digress.
+
+If you suck, embrace the suck. Before long, you will suck much less.
 
 ### Open your project in Atom and start working
 
     $ cd ~
-
     $ atom [repo_name]
 
 ### Conclusion
