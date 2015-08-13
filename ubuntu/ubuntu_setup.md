@@ -26,7 +26,7 @@ The asterisk ```*``` marks the current resolution. The marks ```+``` the recomme
 
 Passing the size ```-s``` option we can set the resolution to our choice.
 
-  $ xrandr -s 1920x1200
+	$ xrandr -s 1920x1200
 
 I find this more comfortable without feeling 'big' on my 13" Macbook than the recommended resolution of ```2560x1600```.
 
