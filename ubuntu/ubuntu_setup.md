@@ -1,7 +1,7 @@
 Fast Development Setup in Ubuntu to Start Working Now
 =====================================================
 
-If you found this from a search, the following few sections describe the reasoning behind why this was valuable to me and how it might be valuable to you. I hope it helps. Skip this silliness and get to the setup [11 Steps](#11-steps)
+If you found this from a search, the following few sections describe the reasoning behind why this was valuable to me and how it might be valuable to you. I hope it helps. Otherwise, skip this silliness and get to the setup [11 Steps](#11-steps)
 
 ### Starting Point
 
@@ -48,9 +48,9 @@ Once severe eyestrain has been relieved, we need to access valuable things from 
 
 Open the system settings from the dock. It's the gear and wrench icon. Select Software and Updates and select the Additional Drivers tab. Wait for any available drivers to be located. Select the driver provided and Apply Changes.
 
-Select the WiFi icon in the upper dock. It is signal design that looks like a piece of pie. You should see the visible WiFi networks in range. If you do not, I found that toggling the selected driver off and back on solved the trick on more than one occasion.
+Select the WiFi icon in the upper dock. It is the signal icon that looks like a piece of pie. Selecting on it, you should see a list of visible WiFi networks in range. If you do not, I found that toggling the selected driver off and back on solved the trick on more than one occasion.
 
-Select your desired network and authenticate as necessary. Open Firefox and navigate to a website.
+Select your desired network and authenticate as necessary. Open Firefox and navigate to a website to verify that you can connect to the internet resources.
 
 Navigate to [Firebug](http://getfirebug.com/) ```http://getfirebug.com/``` in Firefox.
 
@@ -58,7 +58,11 @@ Keep an eye on the WiFi icon in the upper right corner. It's appearance indicate
 
 If you connected to the Firebug homepage, you have an internet connection through your WiFi configuration and the Firebug page is not experiencing a service interruption. You are ready to move on.
 
-If you did not connect to the Firebug page with the available link to download, try to navigate to a site like [Google](google.com) ```google.com``` or [Mozilla](mozilla.org) ```mozilla.org```. If you could not access either of these, select the WiFi icon in the upper right corner to inspect the available networks and begin troubleshooting. This is not a troubleshooting guide and I would recommend using the RSAP method to the best of your ability to solve your connection problem.
+If you did not connect to the Firebug page with the available link to download, try to navigate to a site like [Google](google.com) ```google.com``` or [Mozilla](mozilla.org) ```mozilla.org```. If you could not access either of these, select the WiFi icon in the upper right corner to inspect the available networks and begin troubleshooting. This is not a troubleshooting guide and I would recommend using the [RSAP](http://www.freecodecamp.com/field-guide/how-do-i-get-help-when-i-get-stuck) method to the best of your ability to solve your connection problem.
+
+Link to RSAP method to problem solving: http://www.freecodecamp.com/field-guide/how-do-i-get-help-when-i-get-stuck
+
+Text-only links have been provided in addition to the linsk to this point for you to easily read the url's considering that you might be reading this from a device other than the one running Ubuntu that you are setting up. Once your internet connection is established, open this guide in Firefox on your Ubuntu machine: [Ubuntu Setup](https://github.com/witblacktype/freeCodeCamp_projects/blob/master/ubuntu/ubuntu_setup.md) https://github.com/witblacktype/freeCodeCamp_projects/blob/master/ubuntu/ubuntu_setup.md.
 
 ### Install Firebug for a Browser Debugging Tool
 
