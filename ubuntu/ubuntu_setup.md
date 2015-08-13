@@ -22,9 +22,9 @@ I have only ever used Ubuntu before to download and use an IDE for coding C++ in
 
 I had just created an Ubuntu usb that was bootable on a Mac. In attempting to load Ubuntu from the usb, I deleted everything off of my Mac and installed the usb version of Ubuntu on my Mac. All is not lost: I have time machine backups on another device and most of my recent work has all been pushed to Github. I cannot (or do not know how to) run Ubuntu from the usb and the operating system on my computer does not work. Until I can reinstall OS X, the only way I can manage to run an operating system on my Mac is the trial version of Ubuntu.
 
-    Hello Non-Persistant World
+    Hello Non-Persistent World
 
-When I showed off my workflow for a non-persistant OS, my design partner told me it was very 'cyber punk'. I took that as a compliment.
+When I showed off my workflow for a non-persistent OS, my design partner told me it was very 'cyber punk'. I took that as a compliment.
 
 I can just keep working with the project I have been hosting on Github if I have the minimum tools necessary and can push my changes to Github - since removing the usb or powering down my computer will destroy any changes made to the trial operating system. My objective was to streamline acquiring the base development tools for a Github-hosted project. I also included a few tweaks that I feel have a major impact in optimizing my workflow based on my current OS X dev workflow.
 
@@ -34,7 +34,7 @@ When following instructions you find online, you should be skeptical of their va
 
 ### This Guide's Value to You
 
-This setup is fast and focused on getting back to work in a new Ubuntu Linux OS. I wrote this guide after 48 hours of working in the non-persistant environment I had unfortunately created. This quick setup has allowed me to continue with my work and write this guide without a reliable local save function. Whether you are booting into Ubuntu for the first time or evaluating the trial version, this guide is intended to get you into a development workflow on Ubuntu quickly.
+This setup is fast and focused on getting back to work in a new Ubuntu Linux OS. I wrote this guide after 48 hours of working in the non-persistent environment I had unfortunately created. This quick setup has allowed me to continue with my work and write this guide without a reliable local save function. Whether you are booting into Ubuntu for the first time or evaluating the trial version, this guide is intended to get you into a development workflow on Ubuntu quickly.
 
 ## <a id="10-steps"></a>10 Steps to Start Working on a Github-hosted Project from a Clean Install of Ubuntu
 
