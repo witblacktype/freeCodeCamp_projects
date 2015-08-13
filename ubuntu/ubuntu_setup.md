@@ -195,13 +195,13 @@ Writing these algorithms is my current project in progress. This setup exists so
   1. From Atom, right-click on the file in Atom project browser. Then select the file from the Ubuntu file browser and press ```ctrl``` + ```o``` to open in the default browser (Firefox).
   2. From Firefox, press ```ctrl``` + ```o``` to open a file. Find and select it from the Ubuntu file browser and press ```return``` to open it with Firefox.
   3. From Terminal, ```$ firefox ~/[repo_name]/[path]/[to]/[file]/index.html```. Fill in the appropriate path and done.
-- Open the Firebug debugging console ```f12```.
+- In Firefox, open the Firebug debugging console ```f12```.
 - Make your changes to the project in Atom. DO REAL WORK HERE.
 - Save changes in Atom ```ctrl``` + ```s```.
 - Reload index.html in Firefox ```ctrl``` + ```r```.
 - Debug your javascript using the Firebug debugging console. THE OTHER REAL WORK IS DOWN HERE.
 - Commit changes to your working branch ```$ git commit -am "Edit File X"```.
-- Push your branch to the remote repo on Github ```git push```. Use password authentication fro Github.
+- Push your branch to the remote repo on Github ```git push```. Use password authentication for pushing to Github.
 
 This workflow benefits by not needing any compiler, server or database to serve the code. In practice, making changes and debugging the changes is the only real work being done. The rest is setting up the project, tools and version control.
 
@@ -224,10 +224,12 @@ Since the markdown needs to be compiled to html, we will just let Github handle 
 
 ##### Bonus Points to Turbocharge Your Workflow
 
-Use ```super``` + ```tab``` to switch between programs in your workflow. While holding down on ```super```, each press of the ```tab``` key will cycle to the next program in the dock. ```Shift``` + ```tab``` will cycle through the programs in reverse order.
+Use ```super``` + ```tab``` to switch between programs in your workflow. While holding down on ```super```, each press of the ```tab``` key will cycle to the next program in the dock. ```super``` + ```shift``` + ```tab``` will cycle through the programs in reverse order.
 
 ### Conclusion
 
 For a new user to Ubuntu with a fresh install, it does not take long to set up the minimum tools to work collaboratively on a project managed under git, and this setup is mindful of a usable workflow.
 
 This workflow could be improved significantly with a couple more steps. The next steps I would take would be to setup SSH to handle my Github authentication. Then, I would remap the ```caps lock``` key to be another ```ctrl``` key. That's my happy-place for a basic workflow setup.
+
+_
