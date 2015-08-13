@@ -1,7 +1,7 @@
 Fast Development Setup in Ubuntu to Start Working Now
 =====================================================
 
-If you found this from a search, the following few sections describe the reasoning behind why this was valuable to me and how it might be valuable to you. I hope it helps. Otherwise, skip this silliness and get to the setup #####[10 Steps](#11-steps)
+If you found this from a search, the following few sections describe the reasoning behind why this was valuable to me and how it might be valuable to you. I hope it helps. Otherwise, skip this silliness and get to the setup [10 Steps](#10-steps)
 
 ### Starting Point
 
@@ -36,7 +36,7 @@ When following instructions you find online, you should be skeptical of their va
 
 This setup is fast and focused on getting back to work in a new Ubuntu Linux OS. I wrote this guide after 48 hours of working in the non-persistant environment I had unfortunately created. This quick setup has allowed me to continue with my work and write this guide without a reliable local save function. Whether you are booting into Ubuntu for the first time or evaluating the trial version, this guide is intended to get you into a development workflow on Ubuntu quickly.
 
-## <a id="10-steps"></a>10 Steps to Start Working on a Github hosted project from a clean install of Ubuntu
+## <a id="10-steps"></a>10 Steps to Start Working on a Github-hosted Project from a Clean Install of Ubuntu
 
 ### Adjust Screen Resolution
 
