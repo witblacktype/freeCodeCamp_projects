@@ -180,8 +180,7 @@ I also want to be able to copy and paste between the shell and Atom. For that, w
 
 Time to test ```xclip```. We will make a file called testfile and add text to the file for testing our ```xclip``` functionality.
 
-    $ touch testfile
-    $ echo "xclip is awesome sauce" >> testfile
+    $ echo "xclip is awesome sauce" > testfile
     $ cat testfile | xclip
 
 > Now go 'middle click' to paste the output - paste this in the new Atom file you have open. If you get the string "xclip is awesome sauce", close ```newfile``` in Atom. Now delete ```testfile``` with the command ```$ rm testfile```, and do the same for ```newfile``` with the command ```$ rm newfile```
