@@ -112,13 +112,25 @@ Docs: The man pages. Run the terminal command ```$ man git```.
 
 ##### Atom - text editor
 
-I will use Atom as my text editor because it is free, easy to acquire (courtesy of webupd8.org) and 'hackable' - that must mean it's awesome, right? I had never used it myself before this setup. [Documentation for ppa install from WEBUPD8](webupd8.org/2014/05/install-atom-text-editor-in-ubuntu-via-ppa.html).
+I will use Atom as my text editor because it is free, easy to acquire and 'hackable' - that must mean it's awesome, right? I had never used it myself before this setup. Use one of the two methods to install Atom.
+
+1. Install from ppa. [Documentation for ppa install from WEBUPD8](webupd8.org/2014/05/install-atom-text-editor-in-ubuntu-via-ppa.html).
 
     $ sudo add-apt-repository ppa:webupd8team/atom
     $ sudo apt-get update
     $ sudo apt-get install atom
 
-> The Debian-based Atom distribution is available on [Github from the Atom team](https://github.com/atom/atom) as well, but I didn't realize this when I first set this up.
+2. Download and Install from Atom Releases on Github. [Github from the Atom team](https://github.com/atom/atom). Download atom-amd64.deb. Run the commands to install Atom.
+
+    $ cd ~/Downloads
+    $ sudo dpkg --install atom-amd64.deb
+
+Now that you should have Atom, let's open a new file with it. We will use this file at the end of next step.
+
+    $ cd ~
+    $ atom newfile
+
+> Atom should now be open with a new file called 'newfile'
 
 Docs: [Atom Official Documentation](https://atom.io/docs)
 
@@ -142,7 +154,7 @@ Time to Test ```xclip```. We will make a file called testfile and add text to th
     $ echo "xclip is awesome sauce" >> testfile
     $ cat testfile | xclip
 
-> Now go 'middle click' to paste the output somewhere - perhaps a new Atom file. If you get the string "xclip is awesome sauce", then you can delete testfile with the command ```$ rm testfile```.
+> Now go 'middle click' to paste the output - paste this in the new Atom file you have open. ```$ atom newfile``` and try to paste the X selection. If you get the string "xclip is awesome sauce", close ```newfile``` inAtom. Now delete ```testfile``` with the command ```$ rm testfile```, and do the same for newfile with ```$ rm newfile```
 
 Docs: The man pages. Run the terminal command ```$ man xclip```. I used the first example from the man pages to test the functionality of xclip.
 
