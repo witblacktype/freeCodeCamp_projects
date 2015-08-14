@@ -247,7 +247,7 @@ Writing these algorithms is my current project in progress. This setup exists so
 - Commit changes to your working branch ```$ git commit -am "Edit File X"```.
 - Push your branch to the remote repo on Github ```$ git push```. Use password authentication for pushing to Github.
 
-This workflow benefits by not needing any compiler, server or database to serve the code. In practice, making changes and debugging the changes is the only real work being done. The rest is setting up the project, tools and version control.
+> This workflow benefits by not needing any compiler, server or database to serve the code. In practice, making changes and debugging the changes is the only real work being done. The rest is setting up the project, tools and version control.
 
 ##### Use Case # 2
 
@@ -264,9 +264,9 @@ After acclimating to my new environment and armed with notes from my setup, I wa
 - Reload the markdown file on Github in Firefox ```ctrl``` + ```r```.
 - Inspect the markdown formatting for expected output. THE OTHER REAL WORK IS HERE.
 
-Since the markdown needs to be compiled to html, we will just let Github handle that for us. By committing our changes and pushing them to Gitub, we can inspect the html display of our markdown file. Like the first workflow, the only real work being done here is making changes and inspecting the output of those changes, in this case, html.
-
-Firebug may still be used for inspecting the html, but when I review markdown developed in this manner, I employ an editing process focused on reading the document more than a debugging process focused on inspecting it with Firebug.
+> Since the markdown needs to be compiled to html, we will just let Github handle that for us. By committing our changes and pushing them to Gitub, we can inspect the html display of our markdown file. Like the first workflow, the only real work being done here is making changes and inspecting the output of those changes, in this case, html.
+>
+> Firebug may still be used for inspecting the html, but when I review markdown developed in this manner, I employ an editing process focused on reading the document more than a debugging process focused on inspecting it with Firebug.
 
 ##### Bonus Points to Turbocharge Your Workflow
 
