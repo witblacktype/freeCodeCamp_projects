@@ -1,7 +1,25 @@
 Fast Development Setup in Ubuntu to Start Working Now
 =====================================================
 
-If you found this from a search, the following few sections describe the reasoning behind why this was valuable to me and how it might be valuable to you. I hope it helps. Otherwise, skip this silliness and get to the setup [11 Steps](#11-steps)
+#### Contents
++ [Background](#background)
++ [11 Setup Steps](#11-steps)
+  1. [Adjust Screen Resolution](#step1)
+  2. [Connect to WiFi](#step2)
+  3. [Install Firebug](#step3)
+  4. [Update the Package Manager](#step4)
+  5. [Install Development Tools](#step5)
+  6. [Rearrange the Dock](#step6)
+  7. [Configure git Settings](#step7)
+  8. [Clone a Project](#step8)
+  9. [Configure Upstream Branch](#step9)
+  10. [Create a New Branch](#step10)
+  11. [Open Project and Work](#step11)
++ [Workflows](#workflows)
+  1. [Use Case 1](#case1)
+  2. [Use Case 2](#case2)
+
+## <a id="background"></a>Background
 
 ### Starting Point
 
@@ -38,7 +56,7 @@ This setup is fast and focused on getting back to work in a new Ubuntu Linux OS.
 
 ## <a id="11-steps"></a>11 Steps to Start Working on a Github-hosted Project from a Clean Install of Ubuntu
 
-### 1) Adjust Screen Resolution
+### <a id="step1"></a>1) Adjust Screen Resolution
 
 I found the default screen resolution uncomfortably small. Check the current resolution and available resolution settings. The command ```xrandr``` with no arguments will list the screen resolutions available and information about your screen settings.
 
@@ -54,7 +72,7 @@ I found the default screen resolution uncomfortably small. Check the current res
 
 Docs: The man pages. Run the terminal command ```$ man xrandr```.
 
-### 2) Connect to WiFi
+### <a id="step2"></a>2) Connect to WiFi
 
 Once severe eyestrain has been relieved, we need to access valuable things from the outside world. Let's setup your WiFi connection.
 
@@ -82,7 +100,7 @@ On your new Ubuntu machine, clicking on any highlighted text in this document wi
 
 Docs: [Official Ubuntu Documentation - WifiDocs](https://help.ubuntu.com/community/WifiDocs/WiFiHowTo)
 
-### 3) Install Firebug for a Browser Debugging Tool
+### <a id="step3"></a>3) Install Firebug for a Browser Debugging Tool
 
 Download [Firebug](http://getfirebug.com) from ```http://getfirebug.com/```
 
@@ -90,7 +108,7 @@ Once downloaded, click on the download to install the Firebug extension for Fire
 
 Docs: [Official Firebug Documentation](http://getfirebug.com/faq/)
 
-### 4) Update the Package Manager
+### <a id="step4"></a>4) Update the Package Manager
 
 Welcome to your Ubuntu package manager ```apt-get```. It will install, update, configure, and remove programs. First thing is to update it.
 
@@ -98,7 +116,7 @@ Welcome to your Ubuntu package manager ```apt-get```. It will install, update, c
 
 Docs: The man pages. Run the terminal command ```$ man apt-get```.
 
-### 5) Install Development Tools  
+### <a id="step5"></a>5) Install Development Tools  
 
 Now we can install the programs we need using ```apt-get```. My two primary tools will be git and a text editor with a way to copy and paste between them.
 
@@ -128,7 +146,7 @@ I will use Atom as my text editor because it is free, easy to acquire and 'hacka
         $ cd ~/Downloads
         $ sudo dpkg --install atom-amd64.deb
 
-Now that you should have Atom, let's open a new file with it. We will use this file at the end of next step.
+Now that Atom is installed, open a new file with it. This file will be used for the next step.
 
     $ cd ~
     $ atom newfile
@@ -163,7 +181,7 @@ Docs: The man pages. Run the terminal command ```$ man xclip```. I used the firs
 
 After a few hours in Ubuntu, I fully understand how OS X not shipping with a package manager feels like a huge oversight from a developer perspective. Previously, it felt like a minor oversight having never used Linux from the command line. The Mac Homebrew slogan "The missing package manager for OS X" now feels fully deserved after using ```apt-get``` which is standard to Debian-based Linux distributions.
 
-### 6) Rearrange the Dock
+### <a id="step6"></a>6) Rearrange the Dock
 
 Once I figured out that the shortcut ```cmd``` + ```tab``` did, in fact, cycle through programs, albeit differently from OS X, I rearranged my dock to prioritize my dev tools for a faster workflow. The Mac ```cmd``` key and the Windows ```window``` key are known in Linux as the ```super``` key. The shortcut ```super``` + ```tab``` will cycle through programs in the dock - to keep your fingers on the keyboard, where they rock.
 
@@ -182,7 +200,7 @@ Once I figured out that the shortcut ```cmd``` + ```tab``` did, in fact, cycle t
 
 Docs: I was unable to find the 'Official Documentation' for this. I just figured this out, but you could check these seemingly-relevant docs: [Ubuntu Official Documentation - Ubuntu Desktop Guide](https://help.ubuntu.com/stable/ubuntu-help/).
 
-### 7) Configure your Global git User Settings
+### <a id="step7"></a>7) Configure your Global git User Settings
 
 If you plan to commit, you should have your name and email configured in git. Enter your own information into these commands.
 
@@ -193,7 +211,9 @@ If you plan to commit, you should have your name and email configured in git. En
 >
 > Upon your first commit, git will provide information on the deafult push method update in git 2.0. You can adopt the new behavior or the old behavior with the provided commands and that will sqeulch the message in the future. This git message is worth reading and acting upon.
 
-### 8) Clone a Project in Progress
+Docs: The man pages. Run the terminal command ```$ man git config```.
+
+### <a id="step8"></a>8) Clone a Project in Progress
 
 Let's keep it simple. This project will live in your home.
 
@@ -204,7 +224,7 @@ Let's keep it simple. This project will live in your home.
 
 Docs: The man pages. Run the terminal command ```$ man git clone```.
 
-### 9) Configure the Upstream Branch
+### <a id="step9"></a>9) Configure the Upstream Branch
 
 First, run the following command to see the details of the remote repositories. Move to the git project directory and list the remote repositories. You may run a ```git status``` at any time while working with git.
 
@@ -221,7 +241,7 @@ Run the following command to add the upstream branch.
 
 Docs: The man pages. Run the terminal command ```$ man git remote```.
 
-### 10) You Should Probably Create Your Own Branch
+### <a id="step10"></a>10) You Should Probably Create Your Own Branch
 
 I imagine that if Linus Torvalds were here, he would point out how much our code sucks. He would also show us how we could work with our sucky code in a little corner and not disturb the more gifted among us. Create your own branch and check it out with one command! Now your sucky code can live in it's own sucky world like my code. If your code doesn't suck, other people may care.
 
@@ -233,14 +253,14 @@ I imagine that if Linus Torvalds were here, he would point out how much our code
 
 Docs: The man pages. Run the terminal command ```$ man git checkout```.
 
-### 11) Open Project in Atom and Get to Work
+### <a id="step11"></a>11) Open Project in Atom and Get to Work
 
 Now that you are on your own branch or plan to commit on master like it aint no thang, open your project and begin work.
 
     $ cd ~
     $ atom [repo_name]
 
-## Off to Work
+## <a id="workflows"></a>Off to Workflows
 
 Now that your new Ubuntu machine is setup for work, I will cover how I leverage this setup in my workflow.
 
@@ -253,7 +273,7 @@ The two main tasks that comprise each workflow:
 - Develop locally in Atom and use Firefox to inspect the document.
 - Version control local development under git and push changes to Github.
 
-##### Use Case # 1
+##### <a id="case1"></a>Use Case # 1
 
 *Develop a javascript algorithm locally and save work to a Github repo.*
 
@@ -275,7 +295,7 @@ Writing these algorithms is my current project in progress. This setup exists so
 
 > This workflow benefits by not needing any compiler, server or database to serve the code. In practice, making changes and debugging the changes is the only real work being done. The rest is setting up the project, tools and version control.
 
-##### Use Case # 2
+##### <a id="case2"></a>Use Case # 2
 
 *Develop a markdown document locally and push the document to Github for online viewing.*
 
