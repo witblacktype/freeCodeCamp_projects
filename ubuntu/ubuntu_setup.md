@@ -1,7 +1,8 @@
 Fast Development Setup in Ubuntu to Start Working Now
 =====================================================
 
-#### Contents
+### Contents
+
 [Background](#background)
 
 [11 Setup Steps](#11-steps)
