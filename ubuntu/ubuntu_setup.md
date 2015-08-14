@@ -102,11 +102,15 @@ Docs: The man pages. Run the terminal command ```$ man apt-get```.
 
 Now we can install the programs we need using ```apt-get```. My two primary tools will be git and a text editor with a way to copy and paste between them.
 
+##### git - version control
+
 Let's get git first. Say that ten times fast.
 
     $ sudo apt-get install git
 
 Docs: The man pages. Run the terminal command ```$ man git```.
+
+##### Atom - text editor
 
 I will use Atom as my text editor because it is free, easy to acquire (courtesy of webupd8.org) and 'hackable' - that must mean it's awesome, right? I had never used it myself before this setup. [Documentation for ppa install from WEBUPD8](webupd8.org/2014/05/install-atom-text-editor-in-ubuntu-via-ppa.html).
 
@@ -117,6 +121,8 @@ I will use Atom as my text editor because it is free, easy to acquire (courtesy 
 > The Debian-based Atom distribution is available on [Github from the Atom team](https://github.com/atom/atom) as well, but I didn't realize this when I first set this up.
 
 Docs: [Atom Official Documentation](https://atom.io/docs)
+
+##### ```xclip``` - copy & paste in Ubuntu
 
 I also want to be able to copy and paste between the shell and Atom. For that, we will install ```xclip```. Like installing Firebug, adjusting the screen resolution and rearranging the dock icons, this is not required, but a useful workflow improvement. Before we can install xclip, we need to add the 'universe' repository. Thanks to user Kangaroo on [Ask Ubuntu for this beauty](http://askubuntu.com/questions/148638/how-do-i-enable-the-universe-repository) on adding this repository.
 
