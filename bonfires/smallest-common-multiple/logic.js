@@ -33,4 +33,5 @@ function smallestCommons(arr) {
     return leastCommon(start, stop);
   }
 }
-smallestCommons([1,5]);
+smallestCommons([1,5]);     // Expected value = 60
+//smallestCommons([1,13]);  // Expected value = 360360

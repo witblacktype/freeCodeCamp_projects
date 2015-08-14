@@ -44,13 +44,13 @@ I found the default screen resolution uncomfortably small. Check the current res
 
     $ xrandr
 
-The ```*``` asterisk marks the current resolution. The ```+``` plus marks the recommended resolution(s).
-
-Passing the ```-s``` size option we can set the resolution to our choice.
+> The ```*``` asterisk marks the current resolution. The ```+``` plus marks the recommended resolution(s).
+>
+> Passing the ```-s``` size option we can set the resolution to our choice.
 
     $ xrandr -s 1920x1200
 
-I find this more comfortable without feeling 'big' on my 13" Macbook than the recommended resolution of ```2560x1600```.
+> I find this more comfortable without feeling 'big' on my 13" Macbook than the recommended resolution of ```2560x1600```.
 
 Docs: The man pages. Run the terminal command ```$ man xrandr```.
 
