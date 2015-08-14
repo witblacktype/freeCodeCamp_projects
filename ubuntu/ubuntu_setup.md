@@ -119,6 +119,8 @@ Welcome to your Ubuntu package manager ```apt-get```. It will install, update, c
 
     $ sudo apt-get update
 
+> Remember this command. You will want to run it often when you are installing or updating software packages
+
 Docs: The man pages. Run the terminal command ```$ man apt-get```.
 
 ### <a id="step5"></a>5) Install Development Tools  
@@ -162,7 +164,9 @@ Docs: [Atom Official Documentation](https://atom.io/docs)
 
 ##### ```xclip``` - copy & paste in Ubuntu
 
-I also want to be able to copy and paste between the shell and Atom. For that, we will install ```xclip```. Like installing Firebug, adjusting the screen resolution and rearranging the dock icons, this is not required, but a useful workflow improvement. Before we can install xclip, we need to add the 'universe' repository. Thanks to user Kangaroo on [Ask Ubuntu for this beauty](http://askubuntu.com/questions/148638/how-do-i-enable-the-universe-repository) on adding this repository.
+I also want to be able to copy and paste between the shell and Atom. For that, we will install ```xclip```. Like installing Firebug, adjusting the screen resolution and rearranging the dock icons, this is not required, but a useful workflow improvement.
+
+> Before we can install xclip, we need to add the 'universe' repository. Thanks to user Kangaroo on [Ask Ubuntu for this beauty](http://askubuntu.com/questions/148638/how-do-i-enable-the-universe-repository) on adding this repository.
 
     $ sudo add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) universe"
     $ sudo apt-get update
@@ -174,23 +178,23 @@ I also want to be able to copy and paste between the shell and Atom. For that, w
 >
 > Docs for troubleshooting the touchpad: [Ubuntu Official Documentation - Synaptics Touchpad](https://help.ubuntu.com/community/SynapticsTouchpad)
 
-Time to Test ```xclip```. We will make a file called testfile and add text to the file for testing our ```xclip``` functionality.
+Time to test ```xclip```. We will make a file called testfile and add text to the file for testing our ```xclip``` functionality.
 
     $ touch testfile
     $ echo "xclip is awesome sauce" >> testfile
     $ cat testfile | xclip
 
-> Now go 'middle click' to paste the output - paste this in the new Atom file you have open. ```$ atom newfile``` and try to paste the X selection. If you get the string "xclip is awesome sauce", close ```newfile``` inAtom. Now delete ```testfile``` with the command ```$ rm testfile```, and do the same for newfile with ```$ rm newfile```
+> Now go 'middle click' to paste the output - paste this in the new Atom file you have open. If you get the string "xclip is awesome sauce", close ```newfile``` in Atom. Now delete ```testfile``` with the command ```$ rm testfile```, and do the same for ```newfile``` with the command ```$ rm newfile```
 
-Docs: The man pages. Run the terminal command ```$ man xclip```. I used the first example from the man pages to test the functionality of xclip.
+Docs: The man pages. Run the terminal command ```$ man xclip```. The first example in the docs illustrated how to test ```xclip``` with the command ```$ cat testfile | xclip```. The lesson: never underestimate the value of the man pages.
 
-After a few hours in Ubuntu, I fully understand how OS X not shipping with a package manager feels like a huge oversight from a developer perspective. Previously, it felt like a minor oversight having never used Linux from the command line. The Mac Homebrew slogan "The missing package manager for OS X" now feels fully deserved after using ```apt-get``` which is standard to Debian-based Linux distributions.
+After a few hours in Ubuntu, OS X not shipping with a package manager feels like an even larger oversight considering ```apt-get``` is standard to Debian-based Linux distributions.
 
 ### <a id="step6"></a>6) Rearrange the Dock
 
-Once I figured out that the shortcut ```cmd``` + ```tab``` did, in fact, cycle through programs, albeit differently from OS X, I rearranged my dock to prioritize my dev tools for a faster workflow. The Mac ```cmd``` key and the Windows ```window``` key are known in Linux as the ```super``` key. The shortcut ```super``` + ```tab``` will cycle through programs in the dock - to keep your fingers on the keyboard, where they rock.
+Once I figured out that the Mac keyboard shortcut ```cmd``` + ```tab``` did, in fact, cycle through programs, albeit differently from OS X, I rearranged my dock to prioritize my dev tools for a faster workflow. The Mac ```cmd``` key and the Windows ```window``` key are known in Linux as the ```super``` key. In Ubuntu, ```super``` + ```tab``` will cycle through programs in the dock - to keep your fingers on the keyboard, where they rock.
 
-> To edit the order of programs in the dock, click and hold on an icon to enable drag-and-drop and move it to the desired dock position. I set up my dock based on my priorities being a browser, text editor, shell and files.
+> To edit the order of programs in the dock, click and hold on an icon to enable drag-and-drop and move it to the desired dock position. I set up my dock based on my priorities being a browser, text editor, terminal and files.
 
 ##### From the Top
 - Search - a seemingly immovable object
