@@ -114,16 +114,19 @@ Docs: The man pages. Run the terminal command ```$ man git```.
 
 I will use Atom as my text editor because it is free, easy to acquire and 'hackable' - that must mean it's awesome, right? I had never used it myself before this setup. Use one of the two methods to install Atom.
 
-1. Install from ppa. [Documentation for ppa install from WEBUPD8](webupd8.org/2014/05/install-atom-text-editor-in-ubuntu-via-ppa.html).
 
     $ sudo add-apt-repository ppa:webupd8team/atom
     $ sudo apt-get update
     $ sudo apt-get install atom
 
+
+1. Install from ppa. [Documentation for ppa install from WEBUPD8](webupd8.org/2014/05/install-atom-text-editor-in-ubuntu-via-ppa.html).
+
 2. Download and Install from Atom Releases on Github. [Download on Github from the Atom team](https://github.com/atom/atom). Download atom-amd64.deb. Run the commands to install Atom.
 
     $ cd ~/Downloads
     $ sudo dpkg --install atom-amd64.deb
+
 
 Now that you should have Atom, let's open a new file with it. We will use this file at the end of next step.
 
@@ -220,7 +223,7 @@ Docs: The man pages. Run the terminal command ```$ man git remote```.
 
 ### 10) You Should Probably Create Your Own Branch
 
-I imagine that if Linus Torvalds were here, he would point out how much our code sucks. He would also show us how we could work with our sucky code in a little corner and not disturb the more gifted among us. Create your own branch! Now your sucky code can live in it's own sucky world like my code. If your code doesn't suck, other people may care.
+I imagine that if Linus Torvalds were here, he would point out how much our code sucks. He would also show us how we could work with our sucky code in a little corner and not disturb the more gifted among us. Create your own branch and check it out with one command! Now your sucky code can live in it's own sucky world like my code. If your code doesn't suck, other people may care.
 
     $ git checkout -b iSuck
 
