@@ -2,22 +2,22 @@ Fast Development Setup in Ubuntu to Start Working Now
 =====================================================
 
 #### Contents
-+ [Background](#background)
-+ [11 Setup Steps](#11-steps)
-  1. [Adjust Screen Resolution](#step1)
-  2. [Connect to WiFi](#step2)
-  3. [Install Firebug](#step3)
-  4. [Update the Package Manager](#step4)
-  5. [Install Development Tools](#step5)
-  6. [Rearrange the Dock](#step6)
-  7. [Configure git Settings](#step7)
-  8. [Clone a Project](#step8)
-  9. [Configure Upstream Branch](#step9)
-  10. [Create a New Branch](#step10)
-  11. [Open Project and Work](#step11)
-+ [Workflows](#workflows)
-  1. [Use Case 1](#case1)
-  2. [Use Case 2](#case2)
+[Background](#background)
+[11 Setup Steps](#11-steps)
+1. [Adjust Screen Resolution](#step1)
+2. [Connect to WiFi](#step2)
+3. [Install Firebug](#step3)
+4. [Update the Package Manager](#step4)
+5. [Install Development Tools](#step5)
+6. [Rearrange the Dock](#step6)
+7. [Configure git Settings](#step7)
+8. [Clone a Project](#step8)
+9. [Configure Upstream Branch](#step9)
+10. [Create a New Branch](#step10)
+11. [Open Project and Work](#step11)
+[Workflows](#workflows)
+1. [Use Case 1](#case1)
+2. [Use Case 2](#case2)
 
 ## <a id="background"></a>Background
 
