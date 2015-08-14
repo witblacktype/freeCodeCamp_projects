@@ -123,7 +123,7 @@ I will use Atom as my text editor because it is free, easy to acquire and 'hacka
 
 2. Download and Install from Atom Releases on Github.
 
-[Download on Github from the Atom team](https://github.com/atom/atom/releases). Download ```atom-amd64.deb``` from the latest release. Run the commands to install Atom.
+    [Download on Github from the Atom team](https://github.com/atom/atom/releases). Download ```atom-amd64.deb``` from the latest release. Run the commands to install Atom.
 
         $ cd ~/Downloads
         $ sudo dpkg --install atom-amd64.deb
