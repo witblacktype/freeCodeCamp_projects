@@ -1,7 +1,7 @@
 Fast Development Setup in Ubuntu to Start Working Now
 =====================================================
 
-If you found this from a search, the following few sections describe the reasoning behind why this was valuable to me and how it might be valuable to you. I hope it helps. Otherwise, skip this silliness and get to the setup [10 Steps](#10-steps)
+If you found this from a search, the following few sections describe the reasoning behind why this was valuable to me and how it might be valuable to you. I hope it helps. Otherwise, skip this silliness and get to the setup [11 Steps](#11-steps)
 
 ### Starting Point
 
@@ -36,9 +36,9 @@ When following instructions you find online, you should be skeptical of their va
 
 This setup is fast and focused on getting back to work in a new Ubuntu Linux OS. I wrote this guide after 48 hours of working in the non-persistent environment I had unfortunately created. This quick setup has allowed me to continue with my work and write this guide without a reliable local save function. Whether you are booting into Ubuntu for the first time or evaluating the trial version, this guide is intended to get you into a development workflow on Ubuntu quickly.
 
-## <a id="10-steps"></a>10 Steps to Start Working on a Github-hosted Project from a Clean Install of Ubuntu
+## <a id="11-steps"></a>11 Steps to Start Working on a Github-hosted Project from a Clean Install of Ubuntu
 
-### Adjust Screen Resolution
+### 1 Adjust Screen Resolution
 
 I found the default screen resolution uncomfortably small. Check the current resolution and available resolution settings. The command ```xrandr``` with no arguments will list the screen resolutions available and information about your screen settings.
 
@@ -54,7 +54,7 @@ I found the default screen resolution uncomfortably small. Check the current res
 
 Docs: The man pages. Run the terminal command ```$ man xrandr```.
 
-### Connect to WiFi
+### 2 Connect to WiFi
 
 Once severe eyestrain has been relieved, we need to access valuable things from the outside world. Let's setup your WiFi connection.
 
@@ -72,7 +72,7 @@ If you connected to the Firebug homepage, you have an internet connection throug
 
 If you did not connect to the Firebug page with the available link to download, try to navigate to a site like [Google](google.com) ```google.com``` or [Mozilla](mozilla.org) ```mozilla.org```. If you could not access either of these, select the WiFi icon in the upper right corner to inspect the available networks and begin troubleshooting. This is not a troubleshooting guide and I would recommend using the [RSAP](http://www.freecodecamp.com/field-guide/how-do-i-get-help-when-i-get-stuck) method to the best of your ability to solve your connection problem.
 
-Link to RSAP method for problem solving: ```http://www.freecodecamp.com/field-guide/how-do-i-get-help-when-i-get-stuck```
+Link to RSAP method for problem solving: ```http://www.freecodecamp.com/field-guide/how-do-i-get-help-when-i-get-stuck```. The last step 'post' should be posting on a relevant technical forum (nothing from this guide is on-topic for the Stack Overflow forums in my opinion). For the Ubuntu Linux questions try [Ask Ubuntu](askubuntu.com).
 
 Text-only links have been provided in addition to the links to this point for you to easily read the url's considering that you might be reading this from a device other than the one running Ubuntu that you are setting up. Once your internet connection is established, open this guide [Ubuntu Setup](https://github.com/witblacktype/freeCodeCamp_projects/blob/master/ubuntu/ubuntu_setup.md) in Firefox on your Ubuntu machine
 
@@ -82,7 +82,7 @@ On your new Ubuntu machine, clicking on any highlighted text in this document wi
 
 Docs: [Official Ubuntu Documentation - WifiDocs](https://help.ubuntu.com/community/WifiDocs/WiFiHowTo)
 
-### Install Firebug for a Browser Debugging Tool
+### 3 Install Firebug for a Browser Debugging Tool
 
 Download [Firebug](http://getfirebug.com) from ```http://getfirebug.com/```
 
@@ -90,7 +90,7 @@ Once downloaded, click on the download to install the Firebug extension for Fire
 
 Docs: [Official Firebug Documentation](http://getfirebug.com/faq/)
 
-### Update the Package Manager
+### 4 Update the Package Manager
 
 Welcome to your Ubuntu package manager ```apt-get```. It will install, update, configure, and remove programs. First thing is to update it.
 
@@ -98,7 +98,7 @@ Welcome to your Ubuntu package manager ```apt-get```. It will install, update, c
 
 Docs: The man pages. Run the terminal command ```$ man apt-get```.
 
-### Install Development Tools  
+### 5 Install Development Tools  
 
 Now we can install the programs we need using ```apt-get```. My two primary tools will be git and a text editor with a way to copy and paste between them.
 
@@ -120,7 +120,7 @@ I will use Atom as my text editor because it is free, easy to acquire and 'hacka
     $ sudo apt-get update
     $ sudo apt-get install atom
 
-2. Download and Install from Atom Releases on Github. [Github from the Atom team](https://github.com/atom/atom). Download atom-amd64.deb. Run the commands to install Atom.
+2. Download and Install from Atom Releases on Github. [Download on Github from the Atom team](https://github.com/atom/atom). Download atom-amd64.deb. Run the commands to install Atom.
 
     $ cd ~/Downloads
     $ sudo dpkg --install atom-amd64.deb
@@ -160,7 +160,7 @@ Docs: The man pages. Run the terminal command ```$ man xclip```. I used the firs
 
 After a few hours in Ubuntu, I fully understand how OS X not shipping with a package manager feels like a huge oversight from a developer perspective. Previously, it felt like a minor oversight having never used Linux from the command line. The Mac Homebrew slogan "The missing package manager for OS X" now feels fully deserved after using ```apt-get``` which is standard to Debian-based Linux distributions.
 
-### Rearrange the Dock
+### 6 Rearrange the Dock
 
 Once I figured out that the shortcut ```cmd``` + ```tab``` did, in fact, cycle through programs, albeit differently from OS X, I rearranged my dock to prioritize my dev tools for a faster workflow. The Mac ```cmd``` key and the Windows ```window``` key are known in Linux as the ```super``` key. The shortcut ```super``` + ```tab``` will cycle through programs in the dock - to keep your fingers on the keyboard, where they rock.
 
@@ -179,7 +179,18 @@ Once I figured out that the shortcut ```cmd``` + ```tab``` did, in fact, cycle t
 
 Docs: I was unable to find the 'Official Documentation' for this. I just figured this out, but you could check these seemingly-relevant docs: [Ubuntu Official Documentation - Ubuntu Desktop Guide](https://help.ubuntu.com/stable/ubuntu-help/).
 
-### Clone a Project in Progress
+### 7 Configure your Global git User Settings
+
+If you plan to commit, you should have your name and email configured in git. Enter your own information into these commands.
+
+    $ git config --global user.name "Your Name"
+    $ git config --global user.email "your_email@email.com"
+
+> If you try to commit without doing this config step, you will be prompted to add this.
+>
+> Upon your first commit, git will provide information on the deafult push method update in git 2.0. You can adopt the new behavior or the old behavior with the provided commands and that will sqeulch the message in the future. This git message is worth reading and acting upon.
+
+### 8 Clone a Project in Progress
 
 Let's keep it simple. This project will live in your home.
 
@@ -190,7 +201,7 @@ Let's keep it simple. This project will live in your home.
 
 Docs: The man pages. Run the terminal command ```$ man git clone```.
 
-### Configure the Upstream Branch
+### 9 Configure the Upstream Branch
 
 First, run the following command to see the details of the remote repositories. Move to the git project directory and list the remote repositories. You may run a ```git status``` at any time while working with git.
 
@@ -207,7 +218,7 @@ Run the following command to add the upstream branch.
 
 Docs: The man pages. Run the terminal command ```$ man git remote```.
 
-### You Should Probably Create Your Own Branch
+### 10 You Should Probably Create Your Own Branch
 
 I imagine that if Linus Torvalds were here, he would point out how much our code sucks. He would also show us how we could work with our sucky code in a little corner and not disturb the more gifted among us. Create your own branch! Now your sucky code can live in it's own sucky world like my code. If your code doesn't suck, other people may care.
 
@@ -219,7 +230,7 @@ I imagine that if Linus Torvalds were here, he would point out how much our code
 
 Docs: The man pages. Run the terminal command ```$ man git checkout```.
 
-### Open Project in Atom and Get to Work
+### 11 Open Project in Atom and Get to Work
 
 Now that you are on your own branch or plan to commit on master like it aint no thang, open your project and begin work.
 
