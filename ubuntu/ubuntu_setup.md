@@ -114,7 +114,7 @@ I will use Atom as my text editor because it is free, easy to acquire (courtesy 
     $ sudo apt-get update
     $ sudo apt-get install atom
 
-The Debian-based Atom distribution is available on [Github from the Atom team](https://github.com/atom/atom) as well, but I didn't realize this when I first set this up.
+> The Debian-based Atom distribution is available on [Github from the Atom team](https://github.com/atom/atom) as well, but I didn't realize this when I first set this up.
 
 Docs: [Atom Official Documentation](https://atom.io/docs)
 
@@ -124,7 +124,11 @@ I also want to be able to copy and paste between the shell and Atom. For that, w
     $ sudo apt-get update
     $ sudo apt-get install xclip
 
-To paste from ```xclip```, simply use the middle mouse button. My MacBook Pro seemingly lacks a middle mouse button as part of its touchpad. If you are using the  synaptics driver, the 'middle-mouse button' is merely hidden. To paste an X selection, tap the upper right corner of the touchpad. Docs for troubleshooting the touchpad: [Ubuntu Official Documentation - Synaptics Touchpad](https://help.ubuntu.com/community/SynapticsTouchpad)
+> To paste from ```xclip```, simply use the middle mouse button. My MacBook Pro seemingly lacks a middle mouse button as part of its touchpad. If you are using the  synaptics driver, the 'middle-mouse button' is merely hidden.
+>
+> To paste an X selection, tap the upper right corner of the touchpad.
+>
+> Docs for troubleshooting the touchpad: [Ubuntu Official Documentation - Synaptics Touchpad](https://help.ubuntu.com/community/SynapticsTouchpad)
 
 Time to Test ```xclip```. We will make a file called testfile and add text to the file for testing our ```xclip``` functionality.
 
@@ -132,7 +136,7 @@ Time to Test ```xclip```. We will make a file called testfile and add text to th
     $ echo "xclip is awesome sauce" >> testfile
     $ cat testfile | xclip
 
-Now go 'middle click' to paste the output somewhere - perhaps a new Atom file. If you get the string "xclip is awesome sauce", then you can delete testfile with the command ```$ rm testfile```.
+> Now go 'middle click' to paste the output somewhere - perhaps a new Atom file. If you get the string "xclip is awesome sauce", then you can delete testfile with the command ```$ rm testfile```.
 
 Docs: The man pages. Run the terminal command ```$ man xclip```. I used the first example from the man pages to test the functionality of xclip.
 
@@ -142,7 +146,7 @@ After a few hours in Ubuntu, I fully understand how OS X not shipping with a pac
 
 Once I figured out that the shortcut ```cmd``` + ```tab``` did, in fact, cycle through programs, albeit differently from OS X, I rearranged my dock to prioritize my dev tools for a faster workflow. The Mac ```cmd``` key and the Windows ```window``` key are known in Linux as the ```super``` key. The shortcut ```super``` + ```tab``` will cycle through programs in the dock - to keep your fingers on the keyboard, where they rock.
 
-To edit the order of programs in the dock, click and hold on an icon to enable drag-and-drop and move it to the desired dock position. I set up my dock based on my priorities being a browser, text editor, shell and files.
+> To edit the order of programs in the dock, click and hold on an icon to enable drag-and-drop and move it to the desired dock position. I set up my dock based on my priorities being a browser, text editor, shell and files.
 
 ##### From the Top
 - Search - a seemingly immovable object
@@ -164,7 +168,7 @@ Let's keep it simple. This project will live in your home.
     $ cd ~
     $ git clone https://github.com/[github_username]/[repo_name].git
 
-If this stuff is easy for you, put it wherever you like but note the instructions following may be slightly different for you as a result.
+> If this stuff is easy for you, put it wherever you like but note the instructions following may be slightly different for you as a result.
 
 Docs: The man pages. Run the terminal command ```$ man git clone```.
 
@@ -175,13 +179,13 @@ First, run the following command to see the details of the remote repositories. 
     $ cd [repo_name]
     $ git remote -v
 
-The verbose ```-v``` option displays the details in addition to the names of the remotes.
+> The verbose ```-v``` option displays the details in addition to the names of the remotes.
 
 Run the following command to add the upstream branch.
 
     $ git remote add upstream https://github.com/[github_username]/[repo_name].git
 
-If you run ```git remote -v``` again, you will now see the upstream branch as well.
+> If you run ```git remote -v``` again, you will now see the upstream branch as well.
 
 Docs: The man pages. Run the terminal command ```$ man git remote```.
 
@@ -191,9 +195,9 @@ I imagine that if Linus Torvalds were here, he would point out how much our code
 
     $ git checkout -b iSuck
 
-Now no one will mess with your branch. If your code is actually good, you can just create a new branch called something more dignified. However, you would already know how to do that and this guide might be a total waste of your time, but I digress. If you suck, embrace the suck. Before long, you will suck less.
-
-For those with branch allergens, if you are the sole contributer to a project, you can just commit on master like a boss. That's how this repo got built just for speed of development's sake.
+> Now no one will mess with your branch. If your code is actually good, you can just create a new branch called something more dignified. However, you would already know how to do that and this guide might be a total waste of your time, but I digress. If you suck, embrace the suck. Before long, you will suck less.
+>
+> For those with branch allergens, if you are the sole contributer to a project, you can just commit on master like a boss. That's how this repo got built just for speed of development's sake.
 
 Docs: The man pages. Run the terminal command ```$ man git checkout```.
 
