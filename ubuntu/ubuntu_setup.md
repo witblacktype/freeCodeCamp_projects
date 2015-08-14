@@ -3,7 +3,9 @@ Fast Development Setup in Ubuntu to Start Working Now
 
 #### Contents
 [Background](#background)
+
 [11 Setup Steps](#11-steps)
+
 1. [Adjust Screen Resolution](#step1)
 2. [Connect to WiFi](#step2)
 3. [Install Firebug](#step3)
@@ -15,7 +17,9 @@ Fast Development Setup in Ubuntu to Start Working Now
 9. [Configure Upstream Branch](#step9)
 10. [Create a New Branch](#step10)
 11. [Open Project and Work](#step11)
+
 [Workflows](#workflows)
+
 1. [Use Case 1](#case1)
 2. [Use Case 2](#case2)
 
