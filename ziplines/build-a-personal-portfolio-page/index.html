@@ -2,68 +2,119 @@
 <html>
 <head>
   <link rel="stylesheet" href="bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link href="style.css" rel="stylesheet">
 </head>
 <body>
 <div class="container-fluid">
   <!-- Nav Menu -->
-  <nav>
+  <header>
     <button class="btn btn-default btn-lg"><a href="#">Bretton Raymond</a></button>
-    <ul class="list-inline">
-      <li><a class="btn btn-default btn-lg"  href="#">Home</a></li>
-      <li><a class="btn btn-default btn-lg"  href="#">About</a></li>
-      <li><a class="btn btn-default btn-lg"  href="#">Portfolio</a></li>
-      <li><a class="btn btn-default btn-lg"  href="#">Contact</a></li>
-    </ul>
-  </nav>
+    <nav class="pull-right">
+      <ul class="list-inline">
+        <li><a class="btn btn-default btn-lg"  href="#">Home</a></li>
+        <li><a class="btn btn-default btn-lg"  href="#">About</a></li>
+        <li><a class="btn btn-default btn-lg"  href="#">Portfolio</a></li>
+        <li><a class="btn btn-default btn-lg"  href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
   <!-- Section 1 -->
-  <section>
-    <div class="row">
-      <div>
+  <section id="section1">
+    <div class="container">
+      <div class="row">
         <h1 class="text-center">Bretton Raymond Designs</h1>
         <h3 class="text-center">Vision Made Into Reality</h3>
         <hr>
         <ul class="list-inline">
-          <li><a class="btn btn-default btn-lg social" href="http://twitter.com/witblacktype">Twitter</a></li>
-          <li><a  class="btn btn-default btn-lg social" href="http://github.com/witblacktype">Github</a></li>
-          <li><a  class="btn btn-default btn-lg social" href="">Linked In</a></li>
-          <li><a  class="btn btn-default btn-lg social" href="http://www.freecodecamp.com/witblacktype">freeCodeCamp</a></li>
+          <li><a class="btn btn-default btn-lg social" href="http://twitter.com/witblacktype"><i class="fa fa-twitter fa-fw"></i> Twitter</a></li>
+          <li><a  class="btn btn-default btn-lg social" href="http://github.com/witblacktype"><i class="fa fa-github fa-fw"></i> Github</a></li>
+          <li><a  class="btn btn-default btn-lg social" href=""><i class="fa fa-linkedin fa-fw"></i> Linked In</a></li>
+          <li><a  class="btn btn-default btn-lg social" href="http://www.freecodecamp.com/witblacktype"><i class="fa fa-fire fa-fw"></i> freeCodeCamp</a></li>
         </ul>
       </div>
     </div>
   </section>
   <!-- Section 2 -->
-  <section>
-  <div class="row">
-    <div class="col-md-6">
-      <h2>Bretton Raymond Designs</h2>
-      <p>I love designing products that deliver rich content-driven user experiences. I'm currently working on content-driven projects in video production and creative writing alongside flexible web development practices.</p>
+  <section id="section2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Bretton Raymond Designs</h2>
+          <p>I love designing products that deliver rich content-driven user experiences. I'm currently working on content-driven projects in video production and creative writing alongside flexible web development practices.</p>
+        </div>
+        <div class="col-md-6">
+          <img class="img-circle" src="img/profile.jpg">
+        </div>
+      </div>
     </div>
-    <div class="col-md-6">
-      <img src="img/profile.jpg">
-    </div>
-  </div>
   </section>
   <!-- Section 3 -->
-  <section>
-  <div>
-    <h2 class="text-center">Portfolio</h2>
+  <section id="section3">
+  <div class=container>
+    <h2 class="text-center">Portfolio Projects</h2>
     <h3 class="text-center">A Collection of Recent Work</h3>
+    <div class="row">
+        <div class="col-md-4">
+          <div class="thumbnail"><img src="https://goo.gl/BdmJ9o"></div>
+          <div class="text-center caption">
+            <h4>Awesome Project</h4>
+            <p>HTML5 canvas</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="thumbnail"><img src="http://goo.gl/vTR2MT"></div>
+          <div class="text-center caption">
+            <h4>Epic Project</h4>
+            <p>User Experience</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="thumbnail"><img src="http://goo.gl/TVvJ2J"></div>
+          <div class="text-center caption">
+            <h4>Radical Project</h4>
+            <p>Bootstrap</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="thumbnail"><img src="http://goo.gl/TpbTfp"></div>
+          <div class="text-center caption">
+            <h4>Revolutionary Project</h4>
+            <p>CSS and jQuery</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="thumbnail"><img src="https://goo.gl/BdmJ9o"></div>
+          <div class="text-center caption">
+            <h4>Enlightened Project</h4>
+            <p>HTML and CSS in Statamic CMS</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="thumbnail"><img src="http://goo.gl/vTR2MT"></div>
+          <div class="text-center caption">
+            <h4>One More Project</h4>
+            <p>Wordpress</p>
+          </div>
+        </div>
+    </div>
   </div>
   </section>
   <!-- Section 4 -->
-  <section>
-    <div class="row">
-      <div class="col-md-6">
-        <h2>Connect with Bretton Raymond Designs:<br>bretton.raymond@gmail.com</h2>
-      </div>
-      <div class="col-md-6">
-        <ul>
-          <li><a class="btn btn-default btn-lg social" href="#">Twitter</a></li>
-          <li><a class="btn btn-default btn-lg social" href="#">Github</a></li>
-          <li><a class="btn btn-default btn-lg social" href="#">Linked In</a></li>
-          <li><a class="btn btn-default btn-lg social" href="#">freeCodeCamp</a></li>
-        </ul>
+  <section id="section4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Connect with Bretton Raymond Designs:<br>bretton.raymond@gmail.com</h2>
+        </div>
+        <div class="col-md-6">
+          <ul>
+            <li><a class="btn btn-default btn-lg social" href="http://twitter.com/witblacktype"><i class="fa fa-twitter fa-fw"></i> Twitter</a></li>
+            <li><a  class="btn btn-default btn-lg social" href="http://github.com/witblacktype"><i class="fa fa-github fa-fw"></i> Github</a></li>
+            <li><a  class="btn btn-default btn-lg social" href=""><i class="fa fa-linkedin fa-fw"></i> Linked In</a></li>
+            <li><a  class="btn btn-default btn-lg social" href="http://www.freecodecamp.com/witblacktype"><i class="fa fa-fire fa-fw"></i> freeCodeCamp</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>

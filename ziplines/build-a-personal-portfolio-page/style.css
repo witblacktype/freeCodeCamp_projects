@@ -2,6 +2,50 @@ body{
   font-family: "Lato","Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #f5f5f5;
 }
+header{
+
+}
+.img-circle{
+  border-radius: 50%;
+  height: 360px;
+  width: 360px;
+}
 .social{
   background-color: #c0c0c0;
+}
+.caption{
+  background-color: #000000;
+  opacity: .9;
+  color: #ffffff;
+}
+#section1{
+  background-image: url("img/background_top-min.jpg");
+  background-size: cover;
+  background-position: center;
+  height:800px;
+}
+#section2{
+  background-image: url("img/building.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 800px;
+}
+#section3{
+  background-image: url("img/section3.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 800px;
+}
+#section4{
+  background-image: url("img/section4.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 800px;
+}
+/* Custom Boostrap changes */
+.thumbnail{
+  padding: 0px;
+}
+.container-fluid{
+  padding: 0px;
 }
