@@ -18,6 +18,10 @@ header{
   opacity: .9;
   color: #ffffff;
 }
+.connect{
+  list-style-type: none;
+}
+
 #section1{
   background-image: url("img/background_top-min.jpg");
   background-size: cover;
