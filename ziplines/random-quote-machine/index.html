@@ -6,7 +6,7 @@
   <link href="style.css" rel="stylesheet">
   <script type="text/javascript">
     /*
-    3 Approaches for Cross Origin Requests (CORS)
+    2 Approaches for Cross Origin Requests (CORS)
 
     1. For Local Development using XMLHttPRequests, use a 'mocking' approach adapted for frontend development.
     The link inlcudes an explanation for the included plugin which handles the mocking for jQuery requests from the server.
@@ -23,11 +23,8 @@
       var url = "quote.txt";
       xhr.onreadystatechange = function(){
         if (xhr.readyState == 4 && xhr.status == 200){
-          var myArr = JSON>parse(xhr.responseText);
-          function random(myArr){
-            Math.random (myArr.length -
-          }
-          document.getElementById("change-me").innerHTML = randoQuote;
+          /*var myArr = JSON.parse(xhr.responseText);*/
+          document.getElementById("change-me").innerHTML = xhr.responseText;
         }
       }
       xhr.open("GET", url, true)
