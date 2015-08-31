@@ -20,11 +20,17 @@
     */
     function loadXMLDoc(){
       var xhr = new XMLHttpRequest();
-      var url = "quote.txt";
+      var url = "data.json";
       xhr.onreadystatechange = function(){
         if (xhr.readyState == 4 && xhr.status == 200){
-          /*var myArr = JSON.parse(xhr.responseText);*/
-          document.getElementById("change-me").innerHTML = xhr.responseText;
+          var myArr = JSON.parse(xhr.responseText);
+          var selection = Math.floor(Math.random()*9);
+          /*
+          function update(){
+            selection = Math.floor(Math.random() * 9);
+          }
+          */
+          document.getElementById("change-me").innerHTML = myArr.quotes[selection].quote + myArr.quotes[selection].author;
         }
       }
       xhr.open("GET", url, true)
