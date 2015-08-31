@@ -12,3 +12,7 @@ This is a public collection of the projects I completed while working through th
 
 1. Regular Expressions
 2. Bonfires
+3. Ziplines
+
+#### Appendices
+1. Ubuntu Starter Guide

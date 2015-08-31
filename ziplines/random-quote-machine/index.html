@@ -5,19 +5,7 @@
   <link rel="stylesheet" href="bootstrap.min.css"/>
   <link href="style.css" rel="stylesheet">
   <script type="text/javascript">
-    /*
-    2 Approaches for Cross Origin Requests (CORS)
-
-    1. For Local Development using XMLHttPRequests, use a 'mocking' approach adapted for frontend development.
-    The link inlcudes an explanation for the included plugin which handles the mocking for jQuery requests from the server.
-    http://appendto.com/2010/07/mock-your-ajax-requests-with-mockjax-for-rapid-development/
-
-    2. Allow CORS by modifying the httpd.conf file on Apache server
-    http://www.webdevdoor.com/jquery/cross-domain-browser-json-ajax/
-
-    3. Alter Web Broswer Security settings to allow CORS
-    https://blog.nraboy.com/2014/08/bypass-cors-errors-testing-apis-locally/
-    */
+  
     function loadXMLDoc(){
       var xhr = new XMLHttpRequest();
       var url = "data.json";
@@ -25,18 +13,12 @@
         if (xhr.readyState == 4 && xhr.status == 200){
           var myArr = JSON.parse(xhr.responseText);
           var selection = Math.floor(Math.random()*9);
-          /*
-          function update(){
-            selection = Math.floor(Math.random() * 9);
-          }
-          */
           document.getElementById("change-me").innerHTML = myArr.quotes[selection].quote + myArr.quotes[selection].author;
         }
       }
       xhr.open("GET", url, true)
       xhr.send();
     }
-
   </script>
 </head>
 <body>
@@ -45,7 +27,7 @@
     <h1>Quotes on Systems Design</h1>
     <p>This is a collection of quotes that have been formative in my understanding of systems design. I hope you find them helpful, or at least entertaining.</p>
     <button type="button" onclick="loadXMLDoc()">Get a Quote</button>
-    <p id="change-me">Quoted text goes here. Quoted text goes here. Quoted text goes here. Quoted text goes here. Quoted text goes here. Quoted text goes here. Quoted text goes here.</p>
+    <p id="change-me">Good Design is long-lasting. - Dieter Rams</p>
     <a class="twitter-share-button"
   href="https://twitter.com/intent/tweet" data-count="none" data-size="large">
 Tweet</a>
@@ -54,7 +36,6 @@ Tweet</a>
 
 
   <script>
-
   window.twttr = (function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0],
       t = window.twttr || {};
