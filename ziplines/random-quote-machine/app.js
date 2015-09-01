@@ -1,30 +1,35 @@
 
-  //load twitter js
-  createButton();
-  function createButton() {
-
-      // Create a New Tweet Element
-      var msg  =  document.getElementById("change-me").innerHTML;
-      var link = document.createElement('a');
-      link.setAttribute('href', 'https://twitter.com/share');
-      link.setAttribute('class', 'twitter-share-button');
-      link.setAttribute('id', 'twitterbutton');
-      link.setAttribute("data-text",  "" + msg + "");
-      link.setAttribute("data-via", "denvycom");
-      link.setAttribute("data-size", "large");
-
-     // Put it inside the twtbox div
-      tweetdiv  =  document.getElementById('twtbox');
-      tweetdiv.appendChild(link);
-
-      twttr.widgets.load(); //very important
+//load twitter js
+function loadPage(){
+  var xhr = new XMLHttpRequest();
+  var url = "data.json";
+  console.log("the page has loaded");
+  console.log(xhr.status);
+  xhr.onload = function(){
+    console.log("xhr onload function");
+    var myArr = JSON.parse(xhr.responseText);
+    var selection = Math.floor(Math.random()*8);
+    document.getElementById("change-me").innerHTML = myArr.quotes[selection].quote + "<br><br><em>" + myArr.quotes[selection].author + "</em>";
   }
-  createButton();
+  xhr.open("GET", url, true)
+  xhr.send();
+}
+
+/*
+window.onload = function(){
+  if (xhr.status >= 200 && xhr.status < 400){
+    var myArr = JSON.parse(xhr.responseText);
+    var selection = Math.floor(Math.random()*8);
+    document.getElementById("change-me").innerHTML = myArr.quotes[selection].quote + "<br><br><em>" + myArr.quotes[selection].author + "</em>";
+  }else{
+    console.log("server error");
+  }
+};
+*/
 
 function loadXMLDoc(){
   var xhr = new XMLHttpRequest();
   var url = "data.json";
-  console.log("loadXMLDoc");
   xhr.onreadystatechange = function(){
     if (xhr.readyState == 4 && xhr.status == 200){
       var myArr = JSON.parse(xhr.responseText);
