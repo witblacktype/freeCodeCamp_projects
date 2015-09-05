@@ -36,6 +36,9 @@ h1{
   box-shadow: 3px 3px 3px 3px #eee;
   border-radius: .5em;
 }
+div#widget{
+  height: 200px;
+}
 #tweet{
   background-color: #4099ff;
   color: #ffffff;
