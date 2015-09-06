@@ -3,28 +3,27 @@ function loadXMLDoc(){
   var url = "data.json";
   xhr.onreadystatechange = function(){
     if (xhr.readyState == 4 && xhr.status == 200){
+      //get a semi-random quote from the json and display it
       var myArr = JSON.parse(xhr.responseText);
       var selection = Math.floor(Math.random()*9);
       document.getElementById("change-me").innerHTML = myArr.quotes[selection].quote + "<br><br><em>" + myArr.quotes[selection].author + "</em>";
-      //create dynamic tweet button with quote as tweet message
-      function createButton() {
-        //remove old tweet box
-        var tweet = document.getElementById('tweet').innerHTML;
-        document.getElementById('tweet').innerHTML = "";
-        //set parameters of tweet box
-        var msg  =  myArr.quotes[selection].quote + " - " + myArr.quotes[selection].author;
-        var link = document.createElement('a');
-        link.setAttribute('href', 'https://twitter.com/share');
-        link.setAttribute('class', 'twitter-share-button ');
-        link.setAttribute("id", "twitterbutton");
-        link.setAttribute("data-text", "" + msg + "");
-        link.setAttribute("data-via", "witblacktype");
-        // Put it inside the twtbox div
+      //update twitter button
+      function customTweet(){
+        //parse reposnseText to Twitter format
+        function tweetParse(){
+          var str = myArr.quotes[selection].quote + "%20-%20" + myArr.quotes[selection].author;
+          return str.replace(/\s/g, '%20');
+        }
+        //set the href attribute for the Twitter <a> tag
+        var link = document.getElementById('tweet-link');
+        var str = tweetParse();
+        var dest = "https://twitter.com/intent/tweet?text=" + str + "&via=witblacktype";
+        link.setAttribute('href', dest)
+        //append the href attribute to the Twitter <a> tag
         var tweetdiv  =  document.getElementById('tweet');
         tweetdiv.appendChild(link);
-        twttr.widgets.load(); //very important
       }
-      createButton();
+      customTweet();
     }
   }
   xhr.open("GET", url, true)

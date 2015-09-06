@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link href="style.css" rel="stylesheet">
   <script type="text/javascript" src="app.js"></script>
 </head>
@@ -16,28 +17,22 @@
       <div class="row">
         <button id="get-quote" class="btn col-md-3 col-md-offset-2 col-sm-4 col-sm-offset-1 col-xs-10 col-xs-offset-1" type="button" onclick="loadXMLDoc()">Get New Quote</button>
         <div id="tweet" class="btn col-md-3 col-md-offset-2 col-sm-4 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+
+          <a id="tweet-link" href="https://twitter.com/intent/tweet?text=hello%20world&via=witblacktype" target="_blank">
+            <p>  <i class="fa fa-twitter fa-fw"></i> Tweet Quote</p>
+          </a>
         </div>
       </div>
       <div id="quote" class="row col-md-10 col-md-offset-1">
         <p id="change-me"></p>
       </div>
+      <footer class="row">
+        <div id="footer" class="col-md-10 col-md-offset-1">
+          <p>Source Code Available on <a href="https://github.com/witblacktype/freeCodeCamp_projects/tree/master/ziplines/random-quote-machine" target="_blank">Github</a></p>
+          <p>Built by Bretton Raymond bretton@logicnotmagic.com</p>
+        </div>
+      </footer>
     </section>
   </div>
-  <script>
-  window.twttr = (function(d, s, id) {
-        var t, js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "https://platform.twitter.com/widgets.js";
-        fjs.parentNode.insertBefore(js, fjs);
-        return window.twttr || (t = {
-            _e: [],
-            ready: function(f) {
-                t._e.push(f)
-            }
-        });
-    }(document, "script", "twitter-wjs"));
-  </script>
 </body>
 </html>
