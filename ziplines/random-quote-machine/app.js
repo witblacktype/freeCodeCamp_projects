@@ -2,9 +2,15 @@ function loadXMLDoc(){
   var xhr = new XMLHttpRequest();
   var url = "data.json";
   xhr.onreadystatechange = function(){
-    if (xhr.readyState == 4 && xhr.status == 200){
+    if (xhr.readyState === 4 && xhr.status === 200){
       var arr = JSON.parse(xhr.responseText);
-      var select = Math.floor(Math.random()*9);
+      var select = Math.floor(Math.random() * arr.quotes.length);
+      if (document.getElementById("change-me").innerHTML === arr.quotes[select].quote + "<br><br><em>" + arr.quotes[select].author + "</em>"){
+        select += 1;
+        if (select > arr.quotes.length){
+          select = 0;
+        }
+      }
       document.getElementById("change-me").innerHTML = arr.quotes[select].quote + "<br><br><em>" + arr.quotes[select].author + "</em>";
       function customTweet(){
         function tweetParse(){
