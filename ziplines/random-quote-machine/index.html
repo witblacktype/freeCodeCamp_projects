@@ -11,17 +11,14 @@
   <div class="container-fluid">
     <section class="container">
       <div class="row">
-        <h1 id="title" class="text-center">Personal Philosophy Quotes</h1>
+        <h1 class="text-center">Personal Philosophy Quotes</h1>
         <p id="sub" class="text-center col-md-10 col-md-offset-1">This is a collection of quotes that have been formative for me. I hope you find them helpful, or at least entertaining.</p>
       </div>
       <div class="row">
-        <button id="get-quote" class="btn col-md-3 col-md-offset-2 col-sm-4 col-sm-offset-1 col-xs-10 col-xs-offset-1" type="button" onclick="loadXMLDoc()">Get New Quote</button>
-        <div id="tweet" class="btn col-md-3 col-md-offset-2 col-sm-4 col-sm-offset-2 col-xs-10 col-xs-offset-1">
-
-          <a id="tweet-link" href="https://twitter.com/intent/tweet?text=hello%20world&via=witblacktype" target="_blank">
-            <p>  <i class="fa fa-twitter fa-fw"></i> Tweet Quote</p>
-          </a>
-        </div>
+        <button id="new-quote" class="btn col-md-3 col-md-offset-2 col-sm-4 col-sm-offset-1 col-xs-10 col-xs-offset-1" type="button" onclick="loadXMLDoc()">Get New Quote</button>
+        <a id="tweet" class="btn col-md-3 col-md-offset-2 col-sm-4 col-sm-offset-2 col-xs-10 col-xs-offset-1" href="" target="_blank">
+          <i class="fa fa-twitter fa-fw"></i> Tweet Quote
+        </a>
       </div>
       <div id="quote" class="row col-md-10 col-md-offset-1">
         <p id="change-me"></p>
@@ -29,7 +26,7 @@
       <footer class="row">
         <div id="footer" class="col-md-10 col-md-offset-1">
           <p>Source Code Available on <a href="https://github.com/witblacktype/freeCodeCamp_projects/tree/master/ziplines/random-quote-machine" target="_blank">Github</a></p>
-          <p>Built by Bretton Raymond bretton@logicnotmagic.com</p>
+          <p>Built by <a href="mailto:bretton@logicnotmagic.com?subject=Random-Quote-Machine">Bretton Raymond</a></p>
         </div>
       </footer>
     </section>

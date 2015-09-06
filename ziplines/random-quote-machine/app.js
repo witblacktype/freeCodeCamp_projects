@@ -3,25 +3,18 @@ function loadXMLDoc(){
   var url = "data.json";
   xhr.onreadystatechange = function(){
     if (xhr.readyState == 4 && xhr.status == 200){
-      //get a semi-random quote from the json and display it
-      var myArr = JSON.parse(xhr.responseText);
-      var selection = Math.floor(Math.random()*9);
-      document.getElementById("change-me").innerHTML = myArr.quotes[selection].quote + "<br><br><em>" + myArr.quotes[selection].author + "</em>";
-      //update twitter button
+      var arr = JSON.parse(xhr.responseText);
+      var select = Math.floor(Math.random()*9);
+      document.getElementById("change-me").innerHTML = arr.quotes[select].quote + "<br><br><em>" + arr.quotes[select].author + "</em>";
       function customTweet(){
-        //parse reposnseText to Twitter format
         function tweetParse(){
-          var str = myArr.quotes[selection].quote + "%20-%20" + myArr.quotes[selection].author;
+          var str = arr.quotes[select].quote + "%20-%20" + arr.quotes[select].author;
           return str.replace(/\s/g, '%20');
         }
-        //set the href attribute for the Twitter <a> tag
-        var link = document.getElementById('tweet-link');
-        var str = tweetParse();
-        var dest = "https://twitter.com/intent/tweet?text=" + str + "&via=witblacktype";
-        link.setAttribute('href', dest)
-        //append the href attribute to the Twitter <a> tag
-        var tweetdiv  =  document.getElementById('tweet');
-        tweetdiv.appendChild(link);
+        var parsed = tweetParse();
+        var dest = "https://twitter.com/intent/tweet?text=" + parsed + "&via=witblacktype";
+        var link = document.getElementById('tweet');
+        link.setAttribute('href', dest);
       }
       customTweet();
     }
