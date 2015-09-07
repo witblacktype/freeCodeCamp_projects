@@ -1,6 +1,8 @@
 <!doctype html>
 <html>
 <head>
+  <meta charset="utf-8">
+  <title>BR Designs</title>
   <link rel="stylesheet" href="bootstrap.min.css"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link rel="icon" type="image/x-icon" href="img/favicon.ico"/>
@@ -8,28 +10,33 @@
 </head>
 <body>
 <div class="container-fluid">
-  <!-- Nav Menu -->
-  <header>
-    <div class="container">
-      <button class=""><a href="#">Bretton Raymond</a></button>
-      <nav class="pull-right">
-        <ul class="list-inline">
-          <li class="navigation"><a class="" href="#">Home</a></li>
-          <li class="navigation"><a class="" href="#">About</a></li>
-          <li class="navigation"><a class="" href="#">Portfolio</a></li>
-          <li class="navigation"><a class="" href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+
   <!-- Section 1 -->
   <section id="section1">
+    <header>
+      <div class="container">
+        <a href="#"><em id="logo">Bretton Raymond</em></a>
+        <nav class="pull-right">
+          <ul class="list-inline top-nav">
+            <li class="navigation"><a class="" href="#">Home</a></li>
+            <li class="navigation"><a class="" href="#">About</a></li>
+            <li class="navigation"><a class="" href="#">Portfolio</a></li>
+            <li class="navigation"><a class="" href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
     <div class="container">
+    <!-- Nav Menu -->
+
+
+
       <div class="row">
         <h1 class="text-center">Bretton Raymond Designs</h1>
         <h3 class="text-center">Vision Made Into Reality</h3>
         <hr>
-        <ul class="list-inline">
+        <ul class="list-inline col-md-8 col-md-offset-3">
           <li><a class="btn btn-default btn-lg social" href="http://twitter.com/witblacktype"><i class="fa fa-twitter fa-fw"></i> Twitter</a></li>
           <li><a  class="btn btn-default btn-lg social" href="http://github.com/witblacktype"><i class="fa fa-github fa-fw"></i> Github</a></li>
           <li><a  class="btn btn-default btn-lg social" href=""><i class="fa fa-linkedin fa-fw"></i> Linked In</a></li>
@@ -42,11 +49,47 @@
   <section id="section2">
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
-          <h2>Bretton Raymond Designs</h2>
-          <p>I love designing products that deliver rich content-driven user experiences. I'm currently working on content-driven projects in video production and creative writing alongside flexible web development practices.</p>
+        <div id="summary" class="col-md-6">
+          <div class="row">
+            <div id="br-designs"class="col-md-10 col-md-offset-1">
+              <h2>Bretton Raymond Designs</h2>
+              <p>I love designing products that deliver rich, content-driven user experiences. I'm currently working on content-driven, web projects that synergize my creative and technical skills.</p>
+            </div>
+            <div class="col-md-5 col-md-offset-1">
+              <h4 class="sub-head">Languages</h4>
+              <li class="summary">
+                <ul>html</ul>
+                <ul>css</ul>
+                <ul>javascript</ul>
+                <ul>python</ul>
+              </li>
+            </div>
+            <div class="col-md-5 pull-right">
+              <h4 class="sub-head">Tools</h4>
+              <li class="summary">
+                <ul>git</ul>
+                <ul>ssh</ul>
+                <ul>jQuery</ul>
+                <ul>Bootstrap</ul>
+                <ul>Grunt</ul>
+                <ul>Lightroom</ul>
+                <ul>Photoshop</ul>
+                <ul>Illustrator</ul>
+                <ul>Premiere Pro</ul>
+              </li>
+            </div>
+            <div class="col-md-6 col-md-offset-1 clear-left">
+              <h4 class="sub-head">Process</h4>
+              <li class="summary">
+                <ul>Wireframing</ul>
+                <ul>Agile Development</ul>
+                <ul>Creative Content Production</ul>
+                <ul>Product Testing</ul>
+              </li>
+            </div>
+          </div>
         </div>
-        <div class="col-md-6">
+        <div id="profile" class="col-md-3 col-md-offset-2">
           <img class="img-circle" src="img/profile.jpg">
         </div>
       </div>
@@ -59,7 +102,7 @@
     <h3 class="text-center">A Collection of Recent Work</h3>
     <div class="row">
         <div class="col-md-4">
-          <div class="thumbnail"><img src="https://goo.gl/BdmJ9o"></div>
+          <div class="thumbnail"><img class="img-responsive" src="https://goo.gl/BdmJ9o"></div>
           <div class="text-center caption">
             <h4>Awesome Project</h4>
             <p>HTML5 canvas</p>

@@ -1,16 +1,37 @@
+/* Base Style */
 body{
   font-family: "Lato","Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #f5f5f5;
 }
+.clear-left{
+  clear: left;
+}
+
+
+/* Header Style */
 header{
   height: 4em;
-  background-color: #aaa;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0px;
+  margin: auto;
+  width: 100%;
+  z-index: 100000;
+  letter-spacing: .11em;
 }
+/* Section 1 Style */
 h1{
   font-size: 6em;
-  color: #aaaaa9;
-  text-shadow: 2px 2px 2px #001;
+  color: #e9e9e9;
+  text-shadow: 0px 0px 5px #001;
   font-weight:500;
+  padding-top: 2em;
+}
+h3{
+  font-size: 4em;
+  color: #e9e9e9;
+  text-shadow: 0px 0px 5px #001;
+
 }
 hr{
   border: 0;
@@ -20,18 +41,50 @@ hr{
   border-radius: 1px;
 }
 
-
-
-
-
-
-
-/* Layout */
+/* Section 2 Styles */
+.sub-head{
+  font-size: 1.5em;
+  font-weight: bold;
+  letter-spacing: .1em;
+  margin-bottom: 1em;
+}
+.summary{
+  list-style: none;
+  margin-bottom: 1.25em;
+}
+.summary ul{
+  font-size: 1.25em;
+  letter-spacing: .08em;
+  padding-left: 0;
+}
+#summary{
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+  padding: 2em 0em .8em 0.8em;
+}
+#br-designs{
+  margin-bottom: 1.5em;
+  color: #000000;
+}
+#br-designs h2{
+  font-weight: bold;
+  font-size: 2.2em;
+  letter-spacing: .08em;
+  line-height: 1.4em;
+}
+#br-designs p{
+  font-size: 1.4em;
+  letter-spacing: .05em;
+}
+#profile{
+  padding-top: 4em;
+}
 .img-circle{
   border-radius: 50%;
   height: 360px;
   width: 360px;
 }
+/* Section 3 Styles */
 .social{
   background-color: #c0c0c0;
 }
@@ -54,7 +107,7 @@ hr{
 }
 #section2{
   height: 800px;
-  padding-top: 200px;
+  padding-top: 80px;
   background-attachment: fixed;
   background-position: center center;
   background-size: cover;
@@ -74,10 +127,44 @@ hr{
   background-size: cover;
   background-image: url(img/section4.jpg);
 }
+
+
+ul.top-nav{
+  background-color: rgba(0, 0, 0, .4);
+  height: 4em;
+}
+
+ul.top-nav li{
+  display: inline-block;
+  font-size: 1.4em;
+  padding: 0.6em;
+}
+ul.top-nav li a{
+  color: #ffffff;
+  text-decoration: none;
+}
+ul.top-nav li:hover, ul.top-nav li a:hover{
+  color: #000000;
+  background-color: #ffffff;
+}
+
+a em#logo{
+  display: inline-block;
+  font-size: 1.4em;
+  padding: 0.5em;
+  font-style: normal;
+  color: #ffffff;
+}
 /* Custom Boostrap changes */
 .thumbnail{
   padding: 0px;
+  border: 0px;
+  margin: 0px;
 }
 .container-fluid{
   padding: 0px;
+}
+.portfolio-item{
+  background-color: #000000;
+  padding: 0;
 }
