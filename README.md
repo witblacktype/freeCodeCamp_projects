@@ -16,3 +16,7 @@ This is a public collection of the projects I completed while working through th
 
 #### Appendices
 1. Ubuntu Starter Guide
+
+#### License
+All source code is released under the MIT License.
+All images are released under the Creative Commons License.
