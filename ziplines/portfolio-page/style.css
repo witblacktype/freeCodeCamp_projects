@@ -1,12 +1,14 @@
 /* Base Style */
 body{
-  font-family: "Lato","Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #f5f5f5;
 }
 .clear-left{
   clear: left;
 }
-
+ul{
+  padding: 0;
+}
 
 /* Header Style */
 header{
@@ -19,6 +21,44 @@ header{
   z-index: 100000;
   letter-spacing: .11em;
 }
+ul.top-nav{
+  background-color: rgba(0, 0, 0, .4);
+  height: 4em;
+  margin: 0;
+}
+ul.top-nav a{
+  display: inline-block;
+  font-size: 1.4em;
+  text-decoration: none;
+  height: 100%;
+  padding: 0;
+}
+ul.top-nav a li{
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.7em 1em 0.6em 1em;
+}
+ul.top-nav a:hover, ul.top-nav a:hover li{
+  color: #000000;
+  background-color: #ffffff;
+}
+
+/*
+ul.top-nav a{
+  display: inline-block;
+  font-size: 1.4em;
+  padding: 0.6em;
+  height: 100%;
+}
+ul.top-nav a li{
+  color: #ffffff;
+  text-decoration: none;
+}
+ul.top-nav a:hover, ul.top-nav a:hover li{
+  color: #000000;
+  background-color: #ffffff;
+}
+*/
 /* Section 1 Style */
 h1{
   font-size: 6em;
@@ -41,7 +81,10 @@ hr{
   border-radius: 1px;
 }
 
-/* Section 2 Styles */
+
+
+
+/* Section 2 Style */
 .sub-head{
   font-size: 1.5em;
   font-weight: bold;
@@ -52,7 +95,7 @@ hr{
   list-style: none;
   margin-bottom: 1.25em;
 }
-.summary ul{
+.summary li{
   font-size: 1.25em;
   letter-spacing: .08em;
   padding-left: 0;
@@ -84,26 +127,71 @@ hr{
   height: 360px;
   width: 360px;
 }
-/* Section 3 Styles */
-.social{
-  background-color: #c0c0c0;
-}
+/* Section 3 Style */
+
 .caption{
   background-color: #000000;
   opacity: .9;
-  color: #ffffff;
+  color: #ddd;
+  margin: 0em 0em 1em 0em;
+  padding: 1em;
+}
+.caption h4{
+  font-size: 1.75em;
+}
+.caption p{
+  font-size: 1.25em;
+}
+
+.overlay {
+  position: relative;
+}
+.overlay:after {
+  position: absolute;
+  content:"Overlay Content";
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  opacity:0;
+  background-color: #000000;
+}
+.overlay:hover:after  {
+  opacity: .8;
+}
+.overlay-icon{
+  position:absolute;
+  visibility: hidden;
+}
+.overlay-icon:hover:after{
+  visibility: visible;
+}
+
+
+
+
+
+
+#project1{
+  background-size: cover;
+  background-image: url("https://goo.gl/BdmJ9o");
+}
+
+
+/* Section 4 Style */
+#connect{
+  padding: 8em 0em 8em 0em;
 }
 .connect{
   list-style-type: none;
 }
-
+/* background images */
 #section1{
   height:800px;
   background-attachment: fixed;
   background-position: center center;
   background-size: cover;
-  background-image: url(img/background_top-min.jpg);
-
+  background-image: url(img/one.jpeg);
 }
 #section2{
   height: 800px;
@@ -111,43 +199,25 @@ hr{
   background-attachment: fixed;
   background-position: center center;
   background-size: cover;
-  background-image: url(img/building.jpg);
+  background-image: url(img/two.jpeg);
 }
 #section3{
   height: 800px;
   background-attachment: fixed;
   background-position: center center;
   background-size: cover;
-  background-image: url(img/section3.jpg);
+  background-image: url(img/three.jpeg);
 }
 #section4{
   height: 800px;
   background-attachment: fixed;
   background-position: center center;
   background-size: cover;
-  background-image: url(img/section4.jpg);
+  background-image: url(img/four.jpeg);
 }
 
 
-ul.top-nav{
-  background-color: rgba(0, 0, 0, .4);
-  height: 4em;
-}
-
-ul.top-nav li{
-  display: inline-block;
-  font-size: 1.4em;
-  padding: 0.6em;
-}
-ul.top-nav li a{
-  color: #ffffff;
-  text-decoration: none;
-}
-ul.top-nav li:hover, ul.top-nav li a:hover{
-  color: #000000;
-  background-color: #ffffff;
-}
-
+/* logo style */
 a em#logo{
   display: inline-block;
   font-size: 1.4em;
@@ -156,6 +226,9 @@ a em#logo{
   color: #ffffff;
 }
 /* Custom Boostrap changes */
+.social{
+  background-color: #c0c0c0;
+}
 .thumbnail{
   padding: 0px;
   border: 0px;
@@ -167,4 +240,11 @@ a em#logo{
 .portfolio-item{
   background-color: #000000;
   padding: 0;
+  margin: 0;
+}
+
+
+/* Custom Responsive Styling */
+@media (min-width: @screen-sm-min) {
+
 }
