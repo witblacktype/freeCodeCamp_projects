@@ -59,11 +59,12 @@ header{
   margin-bottom: 0.8em;
 }
 .about-list{
-  margin-right: 5px;
+  padding: 0;
 }
 .about-list a{
   background-color: #fff;
 }
+
 .tab-content{
   background-color: #fff;
   padding: 1.5em 2em 1em 1.8em;
@@ -78,7 +79,9 @@ header{
   padding: 3em 1em 2em 1em;
 }
 .card{
+/*
   width: 280px;
+  */
   margin: 0 auto;
   padding:0;
   border-radius: 4px;
@@ -86,9 +89,10 @@ header{
 }
 .card-img img{
   border-radius: 4px 4px 0 0;
+  object-fit: cover;
 }
 .card-text{
-  padding-top: 2em;
+  padding-top: 0;
   padding-bottom: 2em;
   margin-bottom: 2em;
   background-color: #aaa;
@@ -96,11 +100,36 @@ header{
 }
 .card-text h3, .card-text h4{
   margin:0;
+  clear: both;
 }
 .card-text h4{
   font-weight: 300;
-  margin-top: 1em;
+  margin-top: 0.8em;
 }
+i.project-details{
+  margin-right: .2em;
+  color: #fff;
+}
+i.project-details:hover{
+  color: #333;
+}
+.card-text{
+  position: relative;
+}
+.contact{
+  position: absolute;
+}
+.top{
+  top: 0px;
+}
+.bottom{
+  top: 100px;
+}
+.card-text:hover .top{
+  top: -100px;
+}
+
+
 /* Section .contact Style */
 .contact{
   background-color: #d32929;
@@ -143,4 +172,57 @@ footer p{
 footer p a:hover{
   color: #fff;
   text-decoration: none;
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .home{
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-image: url("../img/layout/1.jpeg");
+  }
+  .about{
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-image: url("../img/layout/two-md.jpg");
+  }
+  .projects{
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-image: url("../img/layout/3.jpg");
+  }
+  .contact{
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-image: url("../img/layout/4.jpeg");
+  }
+}
+@media (min-width: 992px) {
+  .home{
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-image: url("../img/layout/1.jpeg");
+  }
+  .about{
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-image: url("../img/layout/two-lg.jpg");
+  }
+  .projects{
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-image: url("../img/layout/3.jpg");
+  }
+  .contact{
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-image: url("../img/layout/4.jpeg");
+  }
 }
