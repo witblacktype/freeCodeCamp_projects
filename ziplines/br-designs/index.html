@@ -4,10 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bretton Raymond Designs</title>
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/font-awesome.min.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <meta name="description" content="Web Designs by Bretton Raymond. Responsive designed websites with emphasis on user experience.">
+  <link href="css/src/bootstrap.min.css" rel="stylesheet">
+  <link href="css/src/font-awesome.min.css" rel="stylesheet">
+  <link href="css/src/style.css" rel="stylesheet">
+  <link href="css/dist/style.css" rel="stylesheet">
   <link href="favicon.ico" rel="icon" type="image/x-icon">
+  <script src="js/src/jquery.min.js"></script>
+  <script src="js/src/bootstrap.min.js"></script>
+  <script src="js/src/app.js"></script>
+  <script src="js/dist/app.min.js"
 </head>
 <body>
   <div class="container-fluid">
@@ -59,7 +65,7 @@
             </div>
           </div><!-- /.row -->
           <div class="row">
-            <p class="text-justify col-sm-6 col-md-5 col-md-offset-1">I love designing products that deliver rich, content-driven user experiences. I'm currently working on content-driven, web projects that synergize my creative and technical skills.</p>
+            <p class="text-justify col-sm-6 col-md-5 col-md-offset-1">I love designing products that deliver rich, content-driven user experiences. I&apos;m currently working on content-driven, web projects that synergize my creative and technical skills.</p>
             <div class="profile pull-right"></div>
           </div><!-- /.row -->
           <div class="row">
@@ -70,7 +76,7 @@
                 <li><a href='#tools'>Tools</a></li>
               </ul>
               <div class="tab-content">
-                <div class="tab-pane active" id="process">
+                <div role="tabpanel" class="tab-pane active" id="process">
                   <ul class="list-unstyled" >
                     <li>Wireframing</li>
                     <li>Agile Development</li>
@@ -78,14 +84,14 @@
                     <li>Creative Content Production</li>
                   </ul>
                 </div>
-                <div class="tab-pane fade" id="languages">
+                <div role="tabpanel" class="tab-pane fade" id="languages">
                   <ul class="list-unstyled">
                     <li>html</li>
                     <li>css</li>
                     <li>javascript</li>
                   </ul>
                 </div>
-                <div class="tab-pane fade" id="tools">
+                <div role="tabpanel" class="tab-pane fade" id="tools">
                   <ul class="list-unstyled">
                     <li>git</li>
                     <li>jQuery</li>
@@ -154,8 +160,8 @@
             </div><!-- /.card-img -->
             <div class="card-text">
               <div class="banner">
-                <h3>Workout 4 Results<i class="fa fa-angle-double-up fa-fw"></i></h3>
-                <h4>Web Design and Wordpress</h4>
+                <h3>Quote Generator<i class="fa fa-angle-double-up fa-fw"></i></h3>
+                <h4>Bootstrap and Ajax</h4>
               </div>
               <div class="card-details">
                 <div class="card-description">
@@ -376,17 +382,5 @@
       </div>
     </footer>
   </div><!-- /.container-fluid -->
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <!-- jQuery tabs.js required snippet -->
-  <script>
-    $(function() {
-      $('.nav-tabs a').click(function (e) {
-        e.preventDefault();
-        $(this).tab('show');
-      });
-    });
-  </script>
-  <script src="js/app.js"></script>
 </body>
 </html>
