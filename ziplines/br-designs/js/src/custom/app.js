@@ -36,7 +36,7 @@ $(document).ready(function(){
     }, 0, function(){
       //animation callback
     });
-    var $control = $('.card-text.open').find('.fa-angle-double-up');
+    var $control = $('.card-text.open').find('.icon-angle-double-up');
     $({deg: -180}).animate({deg: 0}, {
         duration: 500,
         step: function(now) {
@@ -54,7 +54,7 @@ $(document).ready(function(){
 
     if($(this).css('margin-top') != '0px'){
       $(this).css('margin-top', '0px');
-      var $elem = $(this).find('.fa-angle-double-up');
+      var $elem = $(this).find('.icon-angle-double-up');
       $({deg: -180}).animate({deg: 0}, {
           duration: 500,
           step: function(now) {
@@ -78,7 +78,7 @@ $(document).ready(function(){
       $(this).addClass('open');
       var height = $(this).siblings('.card-img').height();
       $(this).css('margin-top', '-' + height + 'px');
-      var $elem = $(this).find('.fa-angle-double-up');
+      var $elem = $(this).find('.icon-angle-double-up');
       $({deg: 0}).animate({deg: -180}, {
           duration: 500,
           step: function(now) {

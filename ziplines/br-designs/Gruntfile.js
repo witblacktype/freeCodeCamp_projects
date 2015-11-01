@@ -10,7 +10,7 @@ module.exports = function(grunt) {
 			}, //this live reloads html also
 
 			images : {
-				files : ['images/src/*.{png,jpg,gif}'],
+				files : ['img/content/src/*.{png,jpg,gif}', 'img/layout/src/*{png,jpg,gif}'],
 				tasks : ['newer:imagemin']
 			}, // watch images added to src
 
@@ -20,8 +20,8 @@ module.exports = function(grunt) {
 			}, // end of delete sync
 
 			scripts : {
-				files : ['js/libs/*.js', 'js/custom/*.js'],
-				tasks : ['concat', 'uglify'],
+				files : ['js/src/libs/*.js', 'js/src/custom/*.js'],
+				tasks : ['uncss', 'concat', 'uglify'],
 				options : {
 					spawn : false,
 				},
@@ -29,7 +29,7 @@ module.exports = function(grunt) {
 
 			css : {
 				files : ['css/libs/*.css', 'css/custom/*.css'],
-				tasks : ['concat', 'uglify'],
+				tasks : ['uncss', 'concat', 'uglify'],
 				options : {
 					spawn : false,
 				}
@@ -48,49 +48,66 @@ module.exports = function(grunt) {
 
 		delete_sync : {
 			dist : {
-				cwd : 'images/dist',
+				cwd : 'img/dist',
 				src : ['**'],
-				syncWith : 'images/src'
+				syncWith : 'img/src'
 			}
 		}, // end of delete sync
 
 		imagemin : {
+			static: {                          // Target
+	      files: {                         // Dictionary of files
+	        'dist/img.png': 'src/img.png', // 'destination': 'source'
+	        'dist/img.jpg': 'src/img.jpg',
+	        'dist/img.gif': 'src/img.gif'
+	      }
+	    },
 			dynamic : {
 				files : [{
 					expand : true, // Enable dynamic expansion
-					cwd : 'images/src/', // source images (not compressed)
-					src : ['**/*.{png,jpg,gif}'], // Actual patterns to match
-					dest : 'images/dist/' // Destination of compressed files
+					cwd : 'img/content/src', // source images (not compressed)
+					src : ['*.{png,jpg,gif}'], // Actual patterns to match
+					dest : 'img/content/dist/' // Destination of compressed files
 				}]
 			}
 		}, //end imagemin
 
 		concat : {
-			dist : {
-				src : ['js/libs/*.js', 'js/custom/*.js'],
-				dest : 'js/build/production.js'
+			js: {
+				src : ['js/src/libs/jquery.min.js', 'js/src/libs/bootstrap.min.js', 'js/src/custom/app.js'],
+				dest : 'js/dist/production.js'
+			},
+			css: {
+				src : ['css/src/libs/bootstrap.css', 'css/src/libs/fontello.css', 'css/src/custom/style.css'],
+		    dest : 'css/dist/main.css'
 			}
 		}, //end concat
 
 		uglify : {
-			dist : {
-				src : 'js/build/production.js',
-				dest : 'js/build/production.min.js'
+			js : {
+				src : 'js/dist/production.js',
+				dest : 'js/dist/production.min.js'
 			}
 		}, //end uglify
-
-		sass : {
-			dist : {
-				options : {
-					style : 'compressed', //no need for config.rb
-					compass : 'true', //no need to @import compass
-					// require : 'sassy-buttons' // plugins if needed!
-				},
-				files : {
-					'css/main.css' : 'sass/main.scss'
+		uncss: {
+			dist: {
+				files:{
+					'main.css' : ['index.html']
 				}
 			}
-		}, //end of sass
+		},
+		cssmin: {
+		  target: {
+		    files: [{
+		      expand: true,
+		      cwd: 'css/dist',
+		      src: ['main.css'],
+		      dest: 'css/dist',
+		      ext: '.min.css'
+		    }]
+		  }
+		},
+		//end uglify
 
 		autoprefixer : {
 
@@ -105,35 +122,20 @@ module.exports = function(grunt) {
 				}
 
 			}
-		}, //end of autoprefixer
-
-		browserSync : {
-			dev : {
-				bsFiles : {
-					src : ['css/*.css', 'images/*.*', 'js/build/production.min.js', '*.html']
-				},
-				options : {
-					server : {
-						baseDir : "./"
-
-					},
-					watchTask : true // < VERY important
-				}
-			}
-		}
+		} //end of autoprefixer
 	});
 
 	// load npm tasks
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-browser-sync');
-	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-newer');
+	grunt.loadNpmTasks('grunt-uncss');
 	grunt.loadNpmTasks('grunt-delete-sync');
 
 	// define default task
-	grunt.registerTask('default', ["browserSync", "watch"]);
+	grunt.registerTask('default', ["watch"]);
 };
